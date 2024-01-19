@@ -155,4 +155,3 @@ class CartProductAssociation(db.Model):
     cart_id = db.Column(db.Integer, db.ForeignKey('carts.id'), primary_key=True)
     product_id = db.Column(db.Integer, db.ForeignKey('products.id'), primary_key=True)
 
-pp

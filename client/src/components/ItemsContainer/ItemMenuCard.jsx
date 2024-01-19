@@ -4,8 +4,17 @@ import { RiStarSFill, RiLoopRightFill } from "react-icons/ri";
 import { BsCart2 } from "react-icons/bs";
 import Box from '@mui/material/Box';
 
-export default function ItemMenuCard() {
-    let pic = "https://m.media-amazon.com/images/I/81-u4+thvvL._SX679_.jpg"
+
+
+{/* <ItemMenuCard key={product.id} name={product.name} image_files={product.image_files} price={product.price} quantity_desc={product.quantity_desc}  /> */}
+
+
+
+export default function ItemMenuCard( {name, image_files, price, quantity_desc }) {
+    
+    
+    
+    let pic = image_files
 
     return (
         <Box className="min-w-60 min-h-200 flex-shrink-0 flex flex-col">
@@ -20,7 +29,7 @@ export default function ItemMenuCard() {
             {/* this is inner div2, rating maybe */}    
             {/* Rating section - occupying ~5% */}
             <div className="flex-grow-0 flex-shrink-0" style={{ flexBasis: '5%' }}>
-                <div className="flex items-center py-2">
+                <div className="flex items-center py-0">
                     <RiStarSFill style={{color: "yellow"}}/>
                     <RiStarSFill style={{color: "yellow"}}/>
                     <RiStarSFill style={{color: "yellow"}}/>
@@ -37,14 +46,14 @@ export default function ItemMenuCard() {
             {/* this is inner div2, rating maybe */}    
             {/* Name, description etc. - 10%, Need to test this out with actual data and adjust later */}
             <span className="flex-grow-0 flex-shrink-0 font-bold text-black text-md py-2" style={{ flexBasis: '10%' }}>
-                Grocery Item
+                {name}
             </span>
 
             {/* Other details (15% ---- 3, 5%, quantity, farmers name and price) */}
             <div className="flex flex-col flex-grow-0 flex-shrink-0" style={{ flexBasis: '15%' }}>
-                <span className="font-medium text-sm py-2">100 oz set</span>
-                <span className="font-medium text-sm py-2">Farmer Name</span>
-                <span className="font-medium text-sm py-2">$12.99</span>
+                <span className="font-medium text-sm py-0">100 oz set</span>
+                <span className="font-medium text-sm py-0">Farmer Name</span>
+                <span className="font-medium text-md py-4">$12.99</span>
             </div>
 
             {/* Aesthetic Span ---- Lets try this one and see, Empty span - 10% */}
