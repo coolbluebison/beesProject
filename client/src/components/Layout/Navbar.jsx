@@ -65,6 +65,7 @@ export default function NavBar(){
 },[ASHover])
 
     let [cart,setCart] = useState(false)
+    
 
     return(
         <>
@@ -73,20 +74,25 @@ export default function NavBar(){
             <div className="drawer">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
-                    <div className="w-full bg-rose-300 h-20 flex items-center justify-between px-10 shadow-sm">
+                    <div className="w-full bg-[#fff3b2] h-[4.5rem] flex items-center justify-between px-10 shadow-sm">
+                        <div className="flex items-center gap-2 w-[20%] justify-evenly">
                         <p className="text-2xl font-bold text-black cursor-pointer">LOGO</p>
-                        <label htmlFor="my-drawer" className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
-                        <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiRedo size={"1.5rem"}/> Buy It Again</label>
-                        <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><IoPricetagOutline size={"1.5rem"}/>Deals</label>
-                        <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2" onMouseOver={()=>{setASHover(true)}} onMouseLeave={()=>{setASHover(false)}}><RiLoopRightFill size={"1.5rem"}/> Autoship</label>
-                        <label className="text-lg underline font-semibold text-gray-700 cursor-pointer">Get 15% Off</label>
-                        <div className="flex justify-between gap-4 w-1/2 items-center">
-                            <div className="w-[80%] flex bg-white rounded-full h-12 items-center px-4 shadow-md ">
+                            <label htmlFor="my-drawer" className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
+                            {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiRedo size={"1.5rem"}/> Buy It Again</label> */}
+                            {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><IoPricetagOutline size={"1.5rem"}/>Deals</label> */}
+                            {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2" onMouseOver={()=>{setASHover(true)}} onMouseLeave={()=>{setASHover(false)}}><RiLoopRightFill size={"1.5rem"}/> Autoship</label> */}
+                            {/* <label className="text-lg underline font-semibold text-gray-700 cursor-pointer">Get 15% Off</label> */}
+
+                        </div>
+                        <div className="flex justify-between gap-4 w-full items-center">
+                            <div className="w-[85%] flex bg-white rounded-full h-12 items-center px-4 shadow-md ">
                                 <IoSearchOutline size={"1.5rem"}/>
                                 <input className="w-full h-10 bg-white outline-none mx-4 text-gray-800" placeholder="Search..."></input>
                             </div>
+                        <div className="flex gap-3 w-[20%] justify-evenly">
                             <span className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md"><RxAvatar size={"2rem"} onMouseOver={()=>setPHover(true)} onMouseLeave={()=>{setPHover(false)}}/></span>
                             <span className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md hover:bg-green-200" onClick={()=>setCart(!cart)} onMouseOver={!cart ? ()=>{setCartHover(true)} : null} onMouseLeave={()=>{setCartHover(false)}}>{cart ? <IoCloseOutline size={"2rem"}/>: <BsCart2 size={"2rem"}/> }</span>
+                        </div>
                         </div>
                     </div>
                 </div> 

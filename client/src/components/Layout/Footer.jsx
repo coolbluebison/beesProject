@@ -10,7 +10,7 @@ export default function Footer(){
     return(
         <>
         <FooterBanner />
-        <div className="w-full bottom-0  bg-rose-300 text-black">
+        <div className="w-full bottom-0 bg-[#F3FCF0] text-black">
             <div className="flex justify-between items-center gap-8 mx-52">
                 <div className="w-1/3">
                     <p className="font-bold text-4xl text-center py-4 font-dancing">Bees N Bread</p>
@@ -21,7 +21,7 @@ export default function Footer(){
                     </form>
                     <p className="flex items-center justify-center text-center py-2">By providing your email, you agree to receive marketing emails messages from Bees n Bread. Consent not a condition to purchase.</p>
                     <div className="w-full flex justify-center py-2">
-                        <p className="w-2/3 h-[1px] bg-gray-700"></p>
+                        <p className="w-2/3 h-[1px] bg-gray["></p>
                     </div>
                     <div className="flex justify-center items-center py-2 gap-4 text-gray-800">
                         <span className="cursor-pointer hover:text-white"><SlSocialFacebook size={"2rem"}/></span>
