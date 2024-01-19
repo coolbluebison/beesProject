@@ -9,27 +9,21 @@ function ItemsContainer() {
             <Grid container spacing={6}>
                 <Grid item xs={3}>
                     <ItemMenuCard />
-                    LALALAALA
                 </Grid>
                 <Grid item xs={3}>
                     <ItemMenuCard />
-                    LALALAALA
                 </Grid>
                 <Grid item xs={3}>
                     <ItemMenuCard />
-                    LALALAALA
                 </Grid>
                 <Grid item xs={3}>
                     <ItemMenuCard />
-                    LALALAALA
                 </Grid>
                 <Grid item xs={3}>
                     <ItemMenuCard />
-                    LALALAALA
                 </Grid>
                 <Grid item xs={3}>
                     <ItemMenuCard />
-                    LALALAALA
                 </Grid>
 
 
