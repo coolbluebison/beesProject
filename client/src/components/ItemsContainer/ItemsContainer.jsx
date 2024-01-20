@@ -15,12 +15,11 @@ function ItemsContainer( { data }) {
         <Box className="padding" sx={{ flexGrow: 1, padding: '20%' }}>
             <Grid container spacing={6}>
 
-
                 {
                     filtered_data.map ( product => (  
 
                         <Grid item xs={3}>
-                            <ItemMenuCard key={product.id} name={product.name} image_files={product.image_files} price={product.price} quantity_desc={product.quantity_desc}  />
+                            <ItemMenuCard key={product.id} name={product.name} image_files={product.image_files} price={product.price} quantity_desc={product.quantity_desc} seller_id={product.seller_id}  />
                     
                         </Grid>
 
@@ -28,19 +27,7 @@ function ItemsContainer( { data }) {
                     ) )
                 }
                 
-
-                
-                <Grid item xs={3}>
-                    <ItemMenuCard />
-                </Grid>
-                
-                <Grid item xs={3}>
-                    <ItemMenuCard />
-                </Grid>
-                
-
-
-
+          
             </Grid>
         </Box>
     );

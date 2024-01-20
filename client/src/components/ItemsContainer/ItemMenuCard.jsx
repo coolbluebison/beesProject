@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 
 
 
-export default function ItemMenuCard( {name, image_files, price, quantity_desc }) {
+export default function ItemMenuCard( {name, image_files, price, quantity_desc, seller_id }) {
     
     
     
@@ -51,9 +51,9 @@ export default function ItemMenuCard( {name, image_files, price, quantity_desc }
 
             {/* Other details (15% ---- 3, 5%, quantity, farmers name and price) */}
             <div className="flex flex-col flex-grow-0 flex-shrink-0" style={{ flexBasis: '15%' }}>
-                <span className="font-medium text-sm py-0">100 oz set</span>
-                <span className="font-medium text-sm py-0">Farmer Name</span>
-                <span className="font-medium text-md py-4">$12.99</span>
+                <span className="font-medium text-sm py-0">{quantity_desc}</span>
+                <span className="font-medium text-sm py-0">by Farmer Name</span>
+                <span className="font-medium text-md py-4">${price}</span>
             </div>
 
             {/* Aesthetic Span ---- Lets try this one and see, Empty span - 10% */}
