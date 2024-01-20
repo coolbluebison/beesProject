@@ -31,7 +31,9 @@ const router = createBrowserRouter(
 function App() {
 
   return (
-    <RouterProvider router={router} />
+    <div className='bg-white text-black font-lato'>
+      <RouterProvider router={router} />
+    </div>
   )
 }
 

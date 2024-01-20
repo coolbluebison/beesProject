@@ -60,7 +60,7 @@ export default function SignupComponent(){
 
                 <p className="w-full text-center text-xl my-12 py-2 rounded-full hover:bg-rose-600 shadow-md bg-rose-500 cursor-pointer text-white tracking-wider">Sign Up</p>
 
-                <p className="text-sm text-center py-4">Or Continue With</p>
+                <p className="text-sm text-center py-2">Or Continue With</p>
 
                 <div className="flex items-center justify-between mx-2">
                     <span className="h-16 w-16 bg-rose-500 hover:bg-rose-600 hover:scale-105 shadow-md text-white rounded-xl flex items-center justify-center cursor-pointer"><SlSocialGoogle size={"2rem"}/></span>
