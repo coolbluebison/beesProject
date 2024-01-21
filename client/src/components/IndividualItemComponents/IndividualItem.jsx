@@ -9,6 +9,9 @@ import IconButton from '@mui/joy/IconButton';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import ButtonGroup from '@mui/joy/ButtonGroup';
 
+// useNavigate and useHistory
+import { useLocation } from 'react-router-dom';
+
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -31,6 +34,13 @@ const ProductPaper = styled(Paper)(({ theme }) => ({
 
 export default function BasicGrid() {
 
+
+  // Attributes that are passed down from the ItemMenuCard
+  const location = useLocation();
+  const attributes = location.state; 
+
+  {/* <ItemMenuCard key={product.id} name={product.name} image_files={product.image_files} price={product.price} quantity_desc={product.quantity_desc}  /> */}
+
   // Build a grid, using material ui
   // Grid should have 2 columns
   // Each columns should have equal width and total equal length too
@@ -51,8 +61,10 @@ export default function BasicGrid() {
 
   let list_of_qualities = ["Organic", "Grass-Fed", "Certified Gluten-Free", "Vegeterian", "Certified Kosher", "Paleo", "Ketogenic", "Non-GMO Project Verified"]
 
-  let images = ["https://picsum.photos/id/237/200/300", "https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/200/300?grayscale"] 
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  // let images = ["https://picsum.photos/id/237/200/300", "https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/200/300?grayscale"] 
+  let images = attributes.image_files
+
+  const [selectedImage, setSelectedImage] = useState(images);
 
   return (
     
