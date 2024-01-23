@@ -49,23 +49,23 @@ export default function SignupComponent(){
 
                 <div className="h-8 py-5  w-[70%] mx-auto">
                     <div className="flex w-full items-center justify-between p-1">
-                        <input type="checkbox" className="checkbox checkbox-xs bg-white checked:border-white [--chkbg:theme(colors.white)]"/>
+                        <input type="checkbox" className="checkbox checkbox-xs bg-white checked:border-white [--chkbg:theme(colors.white)] shadow-md"/>
                         <p className="text-gray-700 text-sm underline">Opt In To Email Promotions</p>
                     </div>
                     <div className="flex w-full items-center justify-between p-1">
-                        <input type="checkbox" className="checkbox checkbox-xs bg-white checked:border-white [--chkbg:theme(colors.white)]"/>
+                        <input type="checkbox" className="checkbox checkbox-xs bg-white checked:border-white [--chkbg:theme(colors.white)] shadow-md"/>
                         <p className="text-gray-700 text-sm underline">Agree To Terms Of Service</p>
                     </div>
                 </div>
 
-                <p className="w-full text-center text-xl my-12 py-2 rounded-full hover:bg-rose-600 shadow-md bg-rose-500 cursor-pointer text-white tracking-wider">Sign Up</p>
+                <p className="w-full text-center text-xl my-12 py-2 rounded-full hover:bg-rose-600 shadow-md bg-rose-500 cursor-pointer text-black tracking-wider">Sign Up</p>
 
                 <p className="text-sm text-center py-2">Or Continue With</p>
 
                 <div className="flex items-center justify-between mx-2">
-                    <span className="h-16 w-16 bg-rose-500 hover:bg-rose-600 hover:scale-105 shadow-md text-white rounded-xl flex items-center justify-center cursor-pointer"><SlSocialGoogle size={"2rem"}/></span>
-                    <span className="h-16 w-16 bg-rose-500 hover:bg-rose-600 hover:scale-105 shadow-md text-white rounded-xl flex items-center justify-center cursor-pointer"><TiSocialFacebookCircular size={"2.5rem"}/></span>
-                    <span className="h-16 w-16 bg-rose-500 hover:bg-rose-600 hover:scale-105 shadow-md text-white rounded-xl flex items-center justify-center cursor-pointer"><FaApple size={"2.5rem"}/></span>
+                    <span className="h-16 w-16 bg-rose-500 hover:bg-rose-600 hover:scale-105 shadow-md text-black rounded-xl flex items-center justify-center cursor-pointer"><SlSocialGoogle size={"2rem"}/></span>
+                    <span className="h-16 w-16 bg-rose-500 hover:bg-rose-600 hover:scale-105 shadow-md text-black rounded-xl flex items-center justify-center cursor-pointer"><TiSocialFacebookCircular size={"2.5rem"}/></span>
+                    <span className="h-16 w-16 bg-rose-500 hover:bg-rose-600 hover:scale-105 shadow-md text-black rounded-xl flex items-center justify-center cursor-pointer"><FaApple size={"2.5rem"}/></span>
                 </div>
 
             </div>

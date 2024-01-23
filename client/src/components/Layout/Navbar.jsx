@@ -75,7 +75,7 @@ export default function NavBar(){
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
                     <div className="w-full bg-[#fff3b2] h-[4.5rem] flex items-center justify-between px-10 shadow-sm">
-                        <div className="flex items-center gap-2 w-[20%] justify-evenly">
+                        <div className="flex items-center w-[20%] justify-evenly">
                         <p className="text-2xl font-bold text-black cursor-pointer">LOGO</p>
                             <label htmlFor="my-drawer" className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiRedo size={"1.5rem"}/> Buy It Again</label> */}

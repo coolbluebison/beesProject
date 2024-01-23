@@ -12,7 +12,7 @@ export default function Login(){
                 <div className="w-3/4 h-full pb-16 relative">
                     <p className="text-5xl font-dancing text-center py-10">Bees N Bread</p>
                     {form ? <SignupComponent /> : <LoginComponent />}
-                    <div className="w-full transition-all mt-4">
+                    <div className="w-full transition-all mt-20">
                         <p className="text-center text-lg font-semibold">{form? "Already a Member ?" : "Don't Have an Account ?"}</p>
                         <p className="text-center text-rose-800 hover:text-rose-700 underline pt-2 cursor-pointer text-lg font-bold" onClick={()=>setForm(!form)}>{!form? "Sign Up" : "Login"}</p>
                     </div>
