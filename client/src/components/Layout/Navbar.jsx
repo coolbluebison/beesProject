@@ -65,6 +65,9 @@ export default function NavBar(){
 },[ASHover])
 
     let [cart,setCart] = useState(false)
+
+    let [sub,setSub] = useState(false)
+    let [display,setDisplay] = useState(true)
     
 
     return(
@@ -96,12 +99,12 @@ export default function NavBar(){
                         </div>
                     </div>
                 </div> 
-                <DrawerMain />
+                <DrawerMain setSub={setSub} sub={sub} setDisplay={setDisplay} display={display}/>
             </div>
             <AutoshipNav ASDisplay={ASDisplay} setASHover={setASHover}/>
             <CartNav cartHover={cartDisplay} setCartHover={setCartHover}/>
             <ProfileNav pHover={pDisplay} setPHover={setPHover}/>
-            <SubNav />
+            <SubNav setSub={setSub} setDisplay={setDisplay}/>
             <Checkout cart={cart} />
         </nav>
         </>

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function SubNav(){
+export default function SubNav({setDisplay,setSub}){
 
     let categories = [
         "Bees N Bread Specials",
@@ -21,15 +21,19 @@ export default function SubNav(){
         "Gifts"
     ]
 
+    function onClick(){
+        setSub(true)
+        setDisplay(false)
+    }
 
 
     return(
-        <div className="h-10 flex justify-evenly px-12 gap-4 shadow-md bg-slate-100 items-center relative">
+        <div className="h-10 flex justify-evenly px-12 gap-4 shadow-md bg-white items-center relative">
             {categories.map(cat => 
-                <div className="group relative h-full flex items-center" key={cat}>
-                    <p className="text-gray-600 cursor-pointer text-sm font-semibold group-hover:text-cyan-800 " key={cat + "p"}>{cat}</p>
-                    <p className="h-[2px] bg-cyan-800 w-full bottom-0 absolute hidden group-hover:block"></p>
-                </div>
+                <label className="group relative h-full flex items-center" htmlFor="my-drawer" key={cat} onClick={onClick}>
+                    <p className="cursor-pointer text-sm font-semibold group-hover:text-olive " key={cat + "p"}>{cat}</p>
+                    <p className="h-[2px] bg-olive w-full bottom-0 absolute hidden group-hover:block"></p>
+                </label>
             )}
         </div>
     )
