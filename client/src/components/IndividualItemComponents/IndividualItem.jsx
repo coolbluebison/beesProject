@@ -62,9 +62,18 @@ export default function BasicGrid() {
   let list_of_qualities = ["Organic", "Grass-Fed", "Certified Gluten-Free", "Vegeterian", "Certified Kosher", "Paleo", "Ketogenic", "Non-GMO Project Verified"]
 
   // let images = ["https://picsum.photos/id/237/200/300", "https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/200/300?grayscale"] 
-  let images = attributes.image_files
+  let image_files = attributes.image_files
 
-  const [selectedImage, setSelectedImage] = useState(images);
+  let images = []
+
+  Object.values(image_files).forEach(value => {
+    images.push(value)});
+  
+  console.log(images)
+
+  console.log(attributes)
+
+  const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
     
@@ -81,17 +90,17 @@ export default function BasicGrid() {
                   {/* Second stack/span - which shows the Seller and the rating of the Product*/}
                   <span>
                     {/* First stack/span - which shows the name of the company */}
-                    <h1 className="text-4xl font-bold">Grass Fed Himalayan Salted Ghee</h1>
+                    <h1 className="text-4xl font-bold">{attributes.name}</h1>
                     <span><h2 className="text-lg font-bold">Baran's Farm</h2></span>
                     <span><h2 className="text-lg">Rating stars go here</h2></span>
 
                     {/* Third stack/span - which shows the Unit Size*/}
-                    <span><h2 className="text-lg">9.5 oz jar</h2></span>
+                    <span><h2 className="text-lg">{attributes.quantity_desc}</h2></span>
                   </span>
 
                   {/* Fourth stack should include Pricing, separated by padding from other things above and below */}
                   <span>
-                    <h2 className="text-lg font-bold">$12.49</h2>
+                    <h2 className="text-lg font-bold">${attributes.price}</h2>
                     <h2 className="text-lg">-23%</h2>
                   </span>
                   
