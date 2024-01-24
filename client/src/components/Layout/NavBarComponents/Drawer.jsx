@@ -20,7 +20,7 @@ export default function Drawer({sub,setSub,display,setDisplay}){
                             <div className="w-80">
                                 <p className="text-center font-semibold text-black p-4 text-lg w-full bg-yellow">Welcome Back 'User'!</p>
                                 {/* <p className="w-full h-[0.5px]  bg-olive"></p> */}
-                                <div className="transition-all duration-500 bg-white pt-3">
+                                <div className="transition-all duration-500 bg-white pt-3 overflow-y-auto">
                                 {display ? <DrawerMain setDisplay={setDisplay} /> : <CategoryDrawer setDisplay={setDisplay} setSub={setSub}/>}
                                 </div>
                             </div>
