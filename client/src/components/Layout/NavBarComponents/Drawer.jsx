@@ -6,10 +6,9 @@ import CategoryDrawer from "./DrawerComponents/CategoryDrawer"
 import { useState } from "react"
 
 
-export default function Drawer(){
+export default function Drawer({sub,setSub,display,setDisplay}){
 
-    let [sub,setSub] = useState(false)
-    let [display,setDisplay] = useState(true)
+    
     let [subContent,setSubContent] = useState(null)
 
 
