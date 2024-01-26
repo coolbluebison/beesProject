@@ -19,6 +19,8 @@ import { RxAvatar } from "react-icons/rx";
 import { BsCart2 } from "react-icons/bs";
 import { IoCloseOutline } from "react-icons/io5";
 
+import DrawerMain2 from "./NavBarComponents/DrawerMain2";
+
 
 
 export default function NavBar(){
@@ -30,11 +32,18 @@ export default function NavBar(){
     var currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) {
         setHidden(false)
+    } else if (drawer){
+        setHidden(false)
     } else {
         setHidden(true)
     }
     prevScrollpos = currentScrollPos;
     }
+    
+
+    let [drawer,setDrawer] = useState(false)
+
+    
 
     // let [cartHover,setCartHover] = useState(false)
     // let [cartDisplay,setCartDisplay] = useState(false)
@@ -85,15 +94,16 @@ export default function NavBar(){
 
     return(
         <>
-        <nav className={hidden ? "-translate-y-40 top-0 fixed transition-all duration-300 w-screen" : "top-0 transition-all duration-300 fixed z-50 w-screen font-lato"}>
+        <nav className={hidden ? "-translate-y-40 top-0 fixed transition-all duration-300 w-screen " : "top-0 transition-all duration-300 fixed z-50 w-screen font-lato"}>
             <Banner />
-            <div className="drawer">
-            <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+            <div className="drawer drawer-end">
+            <input id="my-drawer-4" type="checkbox" className="drawer-toggle" onChange={()=>setDrawer(!drawer)}/>
                 <div className="drawer-content">
+                    
                     <div className="w-full bg-[#fff3b2] h-[4.5rem] flex items-center justify-between px-10 shadow-sm" >
                         <div className="flex items-center w-[20%] justify-evenly">
                         <p className="text-2xl font-bold text-black cursor-pointer">LOGO</p>
-                            <label htmlFor="my-drawer" className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
+                            <label htmlFor="my-drawer-4" className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiRedo size={"1.5rem"}/> Buy It Again</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><IoPricetagOutline size={"1.5rem"}/>Deals</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2" onMouseOver={()=>{setASHover(true)}} onMouseLeave={()=>{setASHover(false)}}><RiLoopRightFill size={"1.5rem"}/> Autoship</label> */}
@@ -111,10 +121,14 @@ export default function NavBar(){
                             >{cart ? <IoCloseOutline size={"2rem"}/>: <BsCart2 size={"2rem"}/> }</span>
                         </div>
                         </div>
+                        
                     </div>
+                    
                 </div> 
+                <DrawerMain2 />
                 {/* <DrawerMain setSub={setSub} sub={sub} setDisplay={setDisplay} display={display}/> */}
             </div>
+            
             {/* <AutoshipNav ASDisplay={ASDisplay} setASHover={setASHover}/> */}
             {/* <CartNav cartHover={cartDisplay} setCartHover={setCartHover}/> */}
             <ProfileNav pHover={pDisplay} setPHover={setPHover}/>
