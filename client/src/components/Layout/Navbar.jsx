@@ -1,12 +1,12 @@
 import { useState,useEffect } from "react";
 
 // component imports
-import DrawerMain from "./NavBarComponents/Drawer"
+// import DrawerMain from "./NavBarComponents/Drawer"
 import Banner from "./NavBarComponents/Banner"
 import SubNav from "./NavBarComponents/SubNav"
-import CartNav from "./NavBarComponents/CartNav";
-import AutoshipNav from "./NavBarComponents/AutoshipNav";
-import Checkout from "../Checkout/Checkout";
+// import CartNav from "./NavBarComponents/CartNav";
+// import AutoshipNav from "./NavBarComponents/AutoshipNav";
+// import Checkout from "../Checkout/Checkout";
 import ProfileNav from "./NavBarComponents/ProfileNav";
 
 // icon imports
@@ -113,9 +113,9 @@ export default function NavBar(){
                         </div>
                     </div>
                 </div> 
-                <DrawerMain setSub={setSub} sub={sub} setDisplay={setDisplay} display={display}/>
+                {/* <DrawerMain setSub={setSub} sub={sub} setDisplay={setDisplay} display={display}/> */}
             </div>
-            <AutoshipNav ASDisplay={ASDisplay} setASHover={setASHover}/>
+            {/* <AutoshipNav ASDisplay={ASDisplay} setASHover={setASHover}/> */}
             {/* <CartNav cartHover={cartDisplay} setCartHover={setCartHover}/> */}
             <ProfileNav pHover={pDisplay} setPHover={setPHover}/>
             <SubNav setSub={setSub} setDisplay={setDisplay}/>
