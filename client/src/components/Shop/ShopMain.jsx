@@ -18,6 +18,8 @@ export default function ShopMain(){
     return (
         
         <>
+        {/* <ShopNav /> */}
+        <div className="min-h-screen w-full bg-white">
         <ShopNav />
         <div className="h-screen w-full bg-gray-200 relative px-40">
             {/* <ShopFilter /> */}
