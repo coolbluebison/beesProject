@@ -20,7 +20,7 @@ function ItemsContainer( { data }) {
                     filtered_data.map ( product => (
                         
                         <Grid item xs={3}>
-                            <ItemMenuCard key={product.id} name={product.name} image_files={JSON.parse(product.image_files)} price={product.price} quantity_desc={product.quantity_desc} seller_id={product.seller_id}  />
+                            <ItemMenuCard key={product.id} product_id = {product.id} name={product.name} image_files={JSON.parse(product.image_files)} price={product.price} quantity_desc={product.quantity_desc} seller_id={product.seller_id}  />
                     
                         </Grid>
 

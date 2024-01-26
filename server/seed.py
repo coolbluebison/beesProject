@@ -53,9 +53,30 @@ def seed_products():
     img_files_6 = json.dumps({"0":"https://publish-p24753-e82007.adobeaemcloud.com/content/dam/trjo/products/m20903/69975.png/jcr:content/renditions/cq5dam.web.1280.1280", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
     img_files_7 = json.dumps({"0":"https://m.media-amazon.com/images/I/61Op1W2cXNL.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
     img_files_8 = json.dumps({"0":"https://www.allrecipes.com/thmb/mG3tpzT8HHjiYp3Ho9-YbGqa0No=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/176957-baked-kale-chips-DDMFS-4x3-40fcece9965d47278e7f590304d6861c.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
-    img_files_9 = json.dumps({"0":"https://i.mctimg.com/cdn-cgi/image/w=400,h=400,fit=pad/https://i.mctimg.com/file/e5ba9ef94684ba94168bfaaf6ca245c184c6a677/150dc568ed2ead46055ecdbd7ce7fe24f5b11093e03a7cf75bbcdbd545045fd2", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_9 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQ1y6WNGt72hDWxiDVVp1fp8DMSnp84CIZg&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
     img_files_10 = json.dumps({"0":"https://i5.peapod.com/c/SH/SH6C9.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
 
+    img_files_11 = json.dumps({"0":"https://m.media-amazon.com/images/I/715AnUUxmVL._AC_UF1000,1000_QL80_.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_12 = json.dumps({"0":"https://cdn11.bigcommerce.com/s-e132r1196t/images/stencil/1280x1280/products/2798/3701/1621613968.1280.1280__03685.1702264506.jpg?c=2", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_13 = json.dumps({"0":"https://m.media-amazon.com/images/I/61XfHsrlrLL.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_14 = json.dumps({"0":"https://theloopywhisk.com/wp-content/uploads/2018/02/Gluten-Free-Pasta_663px-featured-NEW1.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_15 = json.dumps({"0":"https://images.heb.com/is/image/HEBGrocery/001700228-1", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_16 = json.dumps({"0":"https://www.onehappydish.com/wp-content/uploads/2021/08/homemade-dark-chocolate-recipe.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_17 = json.dumps({"0":"https://www.eatwell101.com/wp-content/uploads/2022/03/How-to-Roast-Almonds-with-sugar-800x533.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_18 = json.dumps({"0":"https://dessertswithbenefits.com/wp-content/uploads/2017/08/Healthy-Homemade-Maple-Syrup3.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_19 = json.dumps({"0":"https://mainegrains.com/wp-content/uploads/2020/06/00000PORTRAIT_00000_BURST20200508133333572.jpeg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_20 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSblFfAU3HTPmJqW-z0xasInJA3dYIJUAL2Hg&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+
+    img_files_21 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSESLZuB68MhcNIxj1aQYcCx9PjrNCg19aJcQ&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_22 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXfBRZFfYfsSuSAZefXpPXTzu5xJPzd1xXwA&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_23 = json.dumps({"0":"https://media.sandiegoreader.com/img/photos/2016/03/13/2016-03-13_12.09.27_t670.jpg?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_24 = json.dumps({"0":"https://storage.googleapis.com/images-kkg-prd-dbdfdde.kkg.prd.v8.commerce.mi9cloud.com/product-images/detail/15e427d6-9da4-445e-9306-4a5998e57cc4.jpeg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_25 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5e5AuZ3RGEI_aNgDnZCPeOhDiWjAV76DQs-Q7nKMRuL6yY04YI5ndQ34a80SDFM58Rc8&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_26 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFJlOu6eR3TT8AVQbMplT3On0Go1T3yqGUmw&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_27 = json.dumps({"0":"https://goodeggs4.imgix.net/a8b37fdb-cfe4-4d25-8b60-71e6937d1392.jpg?w=840&h=525&fm=jpg&q=80&fit=crop", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_28 = json.dumps({"0":"https://goodeggs4.imgix.net/a5b47416-b656-4b63-8385-6aea478c3406.jpg?w=840&h=525&fm=jpg&q=80&fit=crop", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_29 = json.dumps({"0":"https://shop.sprouts.com/cdn-cgi/image/f=auto,q=80,dpr=2,h=324,w=324/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_ddc9d7bb-506d-4541-8116-351240018a87.png", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_30 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsI7qNWktN985emIOhhoFRXQnplIs0WWBrUA&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
 
 
 
@@ -73,6 +94,32 @@ def seed_products():
         {"name": "Kale Chips", "price": 3.99, "quantity_desc": "5 oz bag", "product_cat": "Snacks", "image_files": img_files_8, "qualities": qualities_1, "seller_id": 2},
         {"name": "Cold Pressed Olive Oil", "price": 11.99, "quantity_desc": "500 ml bottle", "product_cat": "Oils & Vinegars", "image_files": img_files_9, "qualities": qualities_1, "seller_id": 1},
         {"name": "Spicy Salsa Sauce", "price": 5.49, "quantity_desc": "16 oz jar", "product_cat": "Condiments", "image_files": img_files_10, "qualities": qualities_1, "seller_id": 1}
+
+        # batch 2
+        {"name": "Chia Seeds", "price": 6.49, "quantity_desc": "1 lbs bag", "product_cat": "Pantry", "image_files": img_files_11, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Organic Spinach", "price": 3.99, "quantity_desc": "10 oz bag", "product_cat": "Produce", "image_files": img_files_12, "qualities": qualities_1, "seller_id": 2},
+        {"name": "Avocado Oil Mayo", "price": 7.99, "quantity_desc": "12 oz jar", "product_cat": "Condiments", "image_files": img_files_13, "qualities": qualities_2, "seller_id": 1},
+        {"name": "Gluten-Free Pasta", "price": 4.49, "quantity_desc": "16 oz package", "product_cat": "Pasta & Noodles", "image_files": img_files_14, "qualities": qualities_2, "seller_id": 2},
+        {"name": "Organic Coconut Water", "price": 2.49, "quantity_desc": "16.9 fl oz bottle", "product_cat": "Beverages", "image_files": img_files_15, "qualities": qualities_2, "seller_id": 2},
+        {"name": "Dark Chocolate Bar", "price": 3.99, "quantity_desc": "3 oz bar", "product_cat": "Snacks", "image_files": img_files_16, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Roasted Almonds", "price": 5.99, "quantity_desc": "10 oz bag", "product_cat": "Nuts & Seeds", "image_files": img_files_17, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Organic Maple Syrup", "price": 9.99, "quantity_desc": "12 fl oz bottle", "product_cat": "Sweeteners", "image_files": img_files_18, "qualities": qualities_2, "seller_id": 2},
+        {"name": "Multigrain Crackers", "price": 4.99, "quantity_desc": "8 oz box", "product_cat": "Snacks", "image_files": img_files_19, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Organic Green Tea", "price": 4.49, "quantity_desc": "20 tea bags", "product_cat": "Beverages", "image_files": img_files_20, "qualities": qualities_2, "seller_id": 2},
+
+        #batch 3 
+        {"name": "Organic Peanut Butter", "price": 6.99, "quantity_desc": "16 oz jar", "product_cat": "Pantry", "image_files": img_files_21, "qualities": qualities_2, "seller_id": 1},
+        {"name": "Fresh Strawberries", "price": 4.99, "quantity_desc": "1 lb container", "product_cat": "Produce", "image_files": img_files_22, "qualities": qualities_2, "seller_id": 2},
+        {"name": "Gluten-Free Oats", "price": 5.49, "quantity_desc": "2 lbs bag", "product_cat": "Breakfast & Cereals", "image_files": img_files_23, "qualities": qualities_1, "seller_id": 2},
+        {"name": "Organic Tomato Sauce", "price": 3.49, "quantity_desc": "24 oz jar", "product_cat": "Condiments", "image_files": img_files_24, "qualities": qualities_1, "seller_id": 2},
+        {"name": "Cashew Nuts", "price": 6.99, "quantity_desc": "8 oz bag", "product_cat": "Nuts & Seeds", "image_files": img_files_25, "qualities": qualities_2, "seller_id": 2},
+        {"name": "Plant-Based Protein Powder", "price": 29.99, "quantity_desc": "1 lb package", "product_cat": "Supplements", "image_files": img_files_26, "qualities": qualities_1, "seller_id": 2},
+        {"name": "Whole Wheat Pasta", "price": 2.99, "quantity_desc": "16 oz package", "product_cat": "Pasta & Noodles", "image_files": img_files_27, "qualities": qualities_2, "seller_id": 2},
+        {"name": "Organic Dried Apricots", "price": 7.49, "quantity_desc": "12 oz bag", "product_cat": "Snacks", "image_files": img_files_28, "qualities": qualities_1, "seller_id": 2},
+        {"name": "Extra Virgin Coconut Oil", "price": 10.99, "quantity_desc": "16 oz jar", "product_cat": "Oils & Vinegars", "image_files": img_files_29, "qualities": qualities_2, "seller_id": 2},
+        {"name": "Kombucha Tea", "price": 3.99, "quantity_desc": "16 fl oz bottle", "product_cat": "Beverages", "image_files": img_files_30, "qualities": qualities_2, "seller_id": 2}
+
+
 
     ]
 

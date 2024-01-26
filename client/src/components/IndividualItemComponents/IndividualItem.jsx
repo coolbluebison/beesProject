@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -13,7 +13,7 @@ import ButtonGroup from '@mui/joy/ButtonGroup';
 import { useLocation } from 'react-router-dom';
 
 
-
+// Stylistic variables
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -32,12 +32,40 @@ const ProductPaper = styled(Paper)(({ theme }) => ({
 }));
 
 
-export default function BasicGrid() {
 
 
+
+export default function IndividualItem() {
+
+
+  
   // Attributes that are passed down from the ItemMenuCard
   const location = useLocation();
   const attributes = location.state; 
+
+  
+  // Product data fetching
+
+  const [productData, setProductData] = useState([])
+
+  useEffect( () => {
+    fetch(`http://127.0.0.1:5555/products/${attributes.product_id}`)
+    .then((response) => response.json())
+    .then((file) => setProductData(file))
+  }, [])
+
+  // Seller data fetching
+
+  const [sellerData, setSellerData] = useState([])
+
+  useEffect( () => {
+    fetch(`http://127.0.0.1:5555/sellers/${attributes.seller_id}`)
+    .then((response) => response.json())
+    .then((file) => setSellerData(file))
+  }, [])
+
+
+
 
   {/* <ItemMenuCard key={product.id} name={product.name} image_files={product.image_files} price={product.price} quantity_desc={product.quantity_desc}  /> */}
 
@@ -60,6 +88,10 @@ export default function BasicGrid() {
   // One main image card and choices of other images related to the product to right of it in small boxes 
 
   let list_of_qualities = ["Organic", "Grass-Fed", "Certified Gluten-Free", "Vegeterian", "Certified Kosher", "Paleo", "Ketogenic", "Non-GMO Project Verified"]
+  // let list_of_qualities = productData.qualities
+
+  console.log("HEEEEEEEEEE")
+  // console.log = JSON.parse(productData.qualities)
 
   // let images = ["https://picsum.photos/id/237/200/300", "https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/200/300?grayscale"] 
   let image_files = attributes.image_files
@@ -68,12 +100,9 @@ export default function BasicGrid() {
 
   Object.values(image_files).forEach(value => {
     images.push(value)});
-  
-  console.log(images)
-
-  console.log(attributes)
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
+
 
   return (
     
@@ -90,12 +119,12 @@ export default function BasicGrid() {
                   {/* Second stack/span - which shows the Seller and the rating of the Product*/}
                   <span>
                     {/* First stack/span - which shows the name of the company */}
-                    <h1 className="text-4xl font-bold">{attributes.name}</h1>
-                    <span><h2 className="text-lg font-bold">Baran's Farm</h2></span>
+                    <h1 className="text-4xl font-bold">{productData.name}</h1>
+                    <span><h2 className="text-lg font-bold">{sellerData.name}</h2></span>
                     <span><h2 className="text-lg">Rating stars go here</h2></span>
 
                     {/* Third stack/span - which shows the Unit Size*/}
-                    <span><h2 className="text-lg">{attributes.quantity_desc}</h2></span>
+                    <span><h2 className="text-lg">{productData.quantity_desc}</h2></span>
                   </span>
 
                   {/* Fourth stack should include Pricing, separated by padding from other things above and below */}
