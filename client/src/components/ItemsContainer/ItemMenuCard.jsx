@@ -23,19 +23,19 @@ export default function ItemMenuCard( {name, image_files, price, quantity_desc, 
 
 
     return (
-        <Box className="min-w-60 min-h-200 flex-shrink-0 flex flex-col">
+        <Box className="max-w-60 h-[450px] flex-shrink-0 flex flex-col">
 
             <div id="gateway" onClick={handleItemClick}>
                 {/* this is inner div1, for the picture */}    
                 {/* Picture section - 40% */}
-                <div className="w-full flex-grow-0 flex-shrink-0" style={{ flexBasis: '40%' }}>
-                    <img src={pic} className="w-full h-full object-fill"/>
+                <div className="w-full h-[200px] flex-grow-0 flex-shrink-0">
+                    <img src={pic} className="w-full h-full object-fill rounded-lg"/>
                 </div>
 
 
                 {/* this is inner div2, rating maybe */}    
                 {/* Rating section - occupying ~5% */}
-                <div className="flex-grow-0 flex-shrink-0" style={{ flexBasis: '5%' }}>
+                <div className="flex-grow-0 flex-shrink-0" >
                     <div className="flex items-center py-0">
                         <RiStarSFill style={{color: "yellow"}}/>
                         <RiStarSFill style={{color: "yellow"}}/>
@@ -52,12 +52,12 @@ export default function ItemMenuCard( {name, image_files, price, quantity_desc, 
 
                 {/* this is inner div2, rating maybe */}    
                 {/* Name, description etc. - 10%, Need to test this out with actual data and adjust later */}
-                <span className="flex-grow-0 flex-shrink-0 font-bold text-black text-md py-2" style={{ flexBasis: '10%' }}>
+                <span className="flex-grow-0 flex-shrink-0 font-bold text-black py-2 " >
                     {name}
                 </span>
 
                 {/* Other details (15% ---- 3, 5%, quantity, farmers name and price) */}
-                <div className="flex flex-col flex-grow-0 flex-shrink-0" style={{ flexBasis: '15%' }}>
+                <div className="flex flex-col flex-grow-0 flex-shrink-0" >
                     <span className="font-medium text-sm py-0">{quantity_desc}</span>
                     <span className="font-medium text-sm py-0">by Farmer Name</span>
                     <span className="font-medium text-md py-4">${price}</span>
@@ -66,12 +66,12 @@ export default function ItemMenuCard( {name, image_files, price, quantity_desc, 
 
 
             {/* Aesthetic Span ---- Lets try this one and see, Empty span - 10% */}
-            <span className="flex-grow-0 flex-shrink-0" style={{ flexBasis: '10%' }}></span>
+            <span className="flex-grow-0 flex-shrink-0" ></span>
 
             {/* Buttons, maybe first button add to cart, second button autoship, check Tri's color scheme and edit - 20% */}
-            <div className="mt-auto text-sm font-semibold flex-grow-0 flex-shrink-0" style={{ flexBasis: '20%' }}>
-                <p className="w-full bg-blue-500 my-2 cursor-pointer text-center transition-all hover:bg-blue-800 rounded-lg py-2 flex items-center justify-center gap-2">Add To Cart <BsCart2 size={"1.1rem"}/> </p>
-                <p className="w-full bg-blue-400 my-2 cursor-pointer text-center transition-all hover:bg-blue-800 rounded-lg py-2 flex items-center justify-center gap-2"><RiLoopRightFill size={"1.1rem"}/>Autoship</p>
+            <div className="mt-auto text-sm font-semibold flex-grow-0 flex-shrink-0" >
+                <p className="w-full bg-yellow my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2">Add To Cart <BsCart2 size={"1.1rem"}/> </p>
+                <p className="w-full bg-honey my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2"><RiLoopRightFill size={"1.1rem"}/>Autoship</p>
             </div>
         
         </Box>

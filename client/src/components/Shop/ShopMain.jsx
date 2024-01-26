@@ -18,7 +18,7 @@ export default function ShopMain(){
     return (
         
         <>
-        <ShopNav />
+        {/* <ShopNav /> */}
         <div className="min-h-screen w-full bg-white">
             {/* <ShopFilter /> */}
             <ItemsContainer data={data} />
