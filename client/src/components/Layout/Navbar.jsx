@@ -103,7 +103,7 @@ export default function NavBar(){
                     <div className="w-full bg-[#fff3b2] h-[4.5rem] flex items-center justify-between px-10 shadow-sm" >
                         <div className="flex items-center w-[20%] justify-evenly">
                         <p className="text-2xl font-bold text-black cursor-pointer">LOGO</p>
-                            <label htmlFor="my-drawer-4" className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
+                            <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiRedo size={"1.5rem"}/> Buy It Again</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><IoPricetagOutline size={"1.5rem"}/>Deals</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2" onMouseOver={()=>{setASHover(true)}} onMouseLeave={()=>{setASHover(false)}}><RiLoopRightFill size={"1.5rem"}/> Autoship</label> */}
@@ -117,8 +117,9 @@ export default function NavBar(){
                             </div>
                         <div className="flex w-[20%] justify-evenly">
                             <span className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md"><RxAvatar size={"2rem"} onMouseOver={()=>setPHover(true)} onMouseLeave={()=>{setPHover(false)}}/></span>
-                            <span className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md hover:bg-green-200"
-                            >{cart ? <IoCloseOutline size={"2rem"}/>: <BsCart2 size={"2rem"}/> }</span>
+                            <label className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md hover:bg-green-200"
+                            htmlFor="my-drawer-4"
+                            >{cart ? <IoCloseOutline size={"2rem"}/>: <BsCart2 size={"2rem"}/> }</label>
                         </div>
                         </div>
                         
