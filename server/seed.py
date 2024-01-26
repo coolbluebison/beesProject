@@ -33,7 +33,7 @@ def seed_sellers():
 
     seller_data = [
         {"name":"Big Sky Ranch", "address": "300 River Rd. Colorado", "description_assets":"Organic and Fresh Farm Produce", "email":"contact@bigskyranch.com", "phone_number":"720-111-2222"},
-        {"name":"Bakers Baker", "address": "South Bakery Road. Denver", "description_assets":"Best Baked Goods Daily for Denver", "email":"contact@bakersbakery.com", "phone_number":"720-111-3333"},
+        {"name":"Baker's Baker", "address": "South Bakery Road. Denver", "description_assets":"Best Baked Goods Daily for Denver", "email":"contact@bakersbakery.com", "phone_number":"720-111-3333"},
     ]
 
     for seller in seller_data:
@@ -78,12 +78,36 @@ def seed_products():
     img_files_29 = json.dumps({"0":"https://shop.sprouts.com/cdn-cgi/image/f=auto,q=80,dpr=2,h=324,w=324/https://d2d8wwwkmhfcva.cloudfront.net/800x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_ddc9d7bb-506d-4541-8116-351240018a87.png", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
     img_files_30 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsI7qNWktN985emIOhhoFRXQnplIs0WWBrUA&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
 
+    img_files_31 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx2_fvv-AjBabZdtRcUs_A1Sukaz9BPf63Aw&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_32 = json.dumps({"0":"https://i5.walmartimages.com/seo/Plant-Junkie-Organic-Avocado-Oil-8-5-fl-oz-250-ml-Glass-Bottle_be369e0d-9e91-4a3d-aba6-9e171b32f2ff.1d3a765483ee9a30f8b2f0c27b9a99c2.jpeg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_33 = json.dumps({"0":"https://caputos.com/wp-content/uploads/Cuyagua-Venezuela-Dark-Chocolate-Bar-Amano-Chocolate-570x855.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_34 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrrCZtl1DHbrXpHzYSrbL9xTN2QEqT8MNv4IgCn1Tetz-002N0RfOYX7EaiuoFJcDzL-U&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_35 = json.dumps({"0":"https://m.media-amazon.com/images/I/61WBtUekmGL.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_36 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhW9Kpic8ZPAEKpaxivdbx_yEiAYC-u3nvKw&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_37 = json.dumps({"0":"https://www.oliveyouwhole.com/wp-content/uploads/2016/12/New-Barn-Almond-Milk-1.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_38 = json.dumps({"0":"https://www.celebratelocalohio.com/cdn/shop/products/b47662f3328d81a9cdd1f33b77f1ab61697f1cc6_480x480.jpg?v=1579879405", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_39 = json.dumps({"0":"https://marvel-b1-cdn.bc0a.com/f00000000205501/www.fruitfulyield.com/media/catalog/product/cache/dfaabb7738d33c83488d2ae38b563b44/m/u/mustard-whole-grain.png", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_40 = json.dumps({"0":"https://m.media-amazon.com/images/S/assets.wholefoodsmarket.com/PIE/product/5f64c549d5a6e3e810d6b575_855942002182-glamor-frontpackageglamor-2020-09-17t11-54-30-iphone-7-quality-90-1-21-1-user-5c4f16e4fc9c91accd101ce4-fvfe-889678._FMwebp__SR600,600_.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+
+    img_files_41 = json.dumps({"0":"https://www.rastellis.com/cdn/shop/products/DTC_Organic_Grass-Fed_Ribeye_Steak_-105.jpg?v=1678219553", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_42 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG3iscX9IgeUPlqB2rXC2XDmxcSRapDdpHEA&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_43 = json.dumps({"0":"https://bambinosbabyfood.com/cdn/shop/products/image_ea39f6e4-993a-4b41-ab8a-ecaa1ca36349_grande.jpg?v=1517320634", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_44 = json.dumps({"0":"https://fivemarysmeats.com/cdn/shop/products/porkchops_1800x1800.jpg?v=1590815513", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_45 = json.dumps({"0":"https://assets.wakefern.com/is/image/wakefern/20823500000-317?$Mi9Product_detail$", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_46 = json.dumps({"0":"https://target.scene7.com/is/image/Target/GUEST_6636736f-be19-4a52-b78f-9ff69bdf1d65?wid=488&hei=488&fmt=pjpeg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_47 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHT2lkffsAfuzamB96ntVYW2LU6d_IzZEDBA&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_48 = json.dumps({"0":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcj56327VNumRg7QRivWWIHSUG1R7IzgWmYg&usqp=CAU", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_49 = json.dumps({"0":"https://www.rimonthly.com/content/uploads/2020/04/93281464_10222020589926474_3536927768941953024_n.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+    img_files_50 = json.dumps({"0":"https://vincentsmeatmarket.com/wp-content/uploads/2023/01/VincentsMeatMarket-214509-Buying-Organic-Duck-blogbanner1.jpg", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
+
 
 
     qualities_1 = json.dumps( {"0":"Organic", "1":"GMO-Free"})
     qualities_2 = json.dumps( {"0":"Pasture Raised"} )
 
     product_data = [
+        
+        # batch 1
         {"name": "Grass Fed Himalayan Salted Ghee", "price": 12.49, "quantity_desc": "9.5 oz jar", "product_cat": "Pantry", "image_files": img_files_1, "qualities": qualities_1, "seller_id": 1},
         {"name": "Free-Range Eggs", "price": 2.99, "quantity_desc": "12 count", "product_cat": "Dairy", "image_files": img_files_2 , "qualities": qualities_2 , "seller_id": 2},
         {"name": "Organic Raw Honey", "price": 10.99, "quantity_desc": "16 oz bottle", "product_cat": "Sweeteners", "image_files": img_files_3, "qualities": qualities_1, "seller_id": 2},
@@ -93,7 +117,7 @@ def seed_products():
         {"name": "Quinoa", "price": 4.99, "quantity_desc": "2 lbs bag", "product_cat": "Grains", "image_files": img_files_7, "qualities": qualities_1, "seller_id": 1},
         {"name": "Kale Chips", "price": 3.99, "quantity_desc": "5 oz bag", "product_cat": "Snacks", "image_files": img_files_8, "qualities": qualities_1, "seller_id": 2},
         {"name": "Cold Pressed Olive Oil", "price": 11.99, "quantity_desc": "500 ml bottle", "product_cat": "Oils & Vinegars", "image_files": img_files_9, "qualities": qualities_1, "seller_id": 1},
-        {"name": "Spicy Salsa Sauce", "price": 5.49, "quantity_desc": "16 oz jar", "product_cat": "Condiments", "image_files": img_files_10, "qualities": qualities_1, "seller_id": 1}
+        {"name": "Spicy Salsa Sauce", "price": 5.49, "quantity_desc": "16 oz jar", "product_cat": "Condiments", "image_files": img_files_10, "qualities": qualities_1, "seller_id": 1},
 
         # batch 2
         {"name": "Chia Seeds", "price": 6.49, "quantity_desc": "1 lbs bag", "product_cat": "Pantry", "image_files": img_files_11, "qualities": qualities_1, "seller_id": 1},
@@ -117,9 +141,31 @@ def seed_products():
         {"name": "Whole Wheat Pasta", "price": 2.99, "quantity_desc": "16 oz package", "product_cat": "Pasta & Noodles", "image_files": img_files_27, "qualities": qualities_2, "seller_id": 2},
         {"name": "Organic Dried Apricots", "price": 7.49, "quantity_desc": "12 oz bag", "product_cat": "Snacks", "image_files": img_files_28, "qualities": qualities_1, "seller_id": 2},
         {"name": "Extra Virgin Coconut Oil", "price": 10.99, "quantity_desc": "16 oz jar", "product_cat": "Oils & Vinegars", "image_files": img_files_29, "qualities": qualities_2, "seller_id": 2},
-        {"name": "Kombucha Tea", "price": 3.99, "quantity_desc": "16 fl oz bottle", "product_cat": "Beverages", "image_files": img_files_30, "qualities": qualities_2, "seller_id": 2}
+        {"name": "Kombucha Tea", "price": 3.99, "quantity_desc": "16 fl oz bottle", "product_cat": "Beverages", "image_files": img_files_30, "qualities": qualities_2, "seller_id": 2},
 
+        #batch 4
+        {"name": "Artisan Sourdough Bread", "price": 4.99, "quantity_desc": "1 loaf", "product_cat": "Bakery", "image_files": img_files_31, "qualities": qualities_1, "seller_id": 31},
+        {"name": "Organic Avocado Oil", "price": 12.99, "quantity_desc": "500 ml bottle", "product_cat": "Oils & Vinegars", "image_files": img_files_32, "qualities": qualities_1, "seller_id": 32},
+        {"name": "Dark Chocolate Bars", "price": 3.49, "quantity_desc": "100g bar", "product_cat": "Snacks", "image_files": img_files_33, "qualities": qualities_2, "seller_id": 33},
+        {"name": "Organic Red Quinoa", "price": 6.99, "quantity_desc": "2 lbs bag", "product_cat": "Grains", "image_files": img_files_34, "qualities": qualities_1, "seller_id": 34},
+        {"name": "Fresh Asparagus", "price": 4.49, "quantity_desc": "1 lb bundle", "product_cat": "Produce", "image_files": img_files_35, "qualities": qualities_1, "seller_id": 35},
+        {"name": "Vegan Protein Bars", "price": 2.50, "quantity_desc": "per bar", "product_cat": "Health Foods", "image_files": img_files_36, "qualities": qualities_1, "seller_id": 36},
+        {"name": "Almond Milk", "price": 3.99, "quantity_desc": "1 liter carton", "product_cat": "Dairy Alternatives", "image_files": img_files_37, "qualities": qualities_1, "seller_id": 37},
+        {"name": "Organic Sachet Green Tea", "price": 5.99, "quantity_desc": "20 bags box", "product_cat": "Beverages", "image_files": img_files_38, "qualities": qualities_2, "seller_id": 38},
+        {"name": "Whole Grain Mustard", "price": 3.99, "quantity_desc": "10 oz jar", "product_cat": "Condiments", "image_files": img_files_39, "qualities": qualities_2, "seller_id": 39},
+        {"name": "Spelt Flour", "price": 4.99, "quantity_desc": "2 lbs bag", "product_cat": "Baking Supplies", "image_files": img_files_40, "qualities": qualities_2, "seller_id": 40},
 
+        #batch 5
+        {"name": "Grass-Fed Beef Ribeye Steak", "price": 14.99, "quantity_desc": "1 lb", "product_cat": "Beef", "image_files": img_files_41, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Organic Chicken Breasts", "price": 9.99, "quantity_desc": "2 lbs", "product_cat": "Poultry", "image_files": img_files_42, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Wild-Caught Salmon Fillets", "price": 16.99, "quantity_desc": "1 lb", "product_cat": "Seafood", "image_files": img_files_43, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Natural Pork Chops", "price": 8.49, "quantity_desc": "1 lb", "product_cat": "Pork", "image_files": img_files_44, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Jumbo Shrimp", "price": 18.99, "quantity_desc": "1 lb", "product_cat": "Seafood", "image_files": img_files_45, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Organic Ground Turkey", "price": 7.99, "quantity_desc": "1 lb", "product_cat": "Poultry", "image_files": img_files_46, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Fresh Tilapia Fillets", "price": 14.99, "quantity_desc": "1 lb", "product_cat": "Seafood", "image_files": img_files_47, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Grass-Fed Lamb Chops", "price": 21.99, "quantity_desc": "1 lb", "product_cat": "Beef", "image_files": img_files_48, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Live Lobsters", "price": 55.99, "quantity_desc": "per lobster", "product_cat": "Seafood", "image_files": img_files_49, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Duck Breast", "price": 15.99, "quantity_desc": "1 lb", "product_cat": "Poultry", "image_files": img_files_50, "qualities": qualities_1, "seller_id": 1}
 
     ]
 
