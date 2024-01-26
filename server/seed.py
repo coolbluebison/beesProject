@@ -48,8 +48,8 @@ def seed_products():
     img_files_2 = json.dumps({"0":"https://img.thrivemarket.com/store/full/1/9/191011000872_front_1_1.jpg?w=256&jpg_quality=80", "1":"https://img.thrivemarket.com/store/full/0/2/025317605564_2_1_1.jpg?w=1260&jpg_quality=90"})
 
     product_data = [
-        {"name": "Grass Fed Himalayan Salted Ghee", "price": 12.49, "quantity_desc": "9.5 oz jar", "product_cat": "Pantry", "image_files": img_files_1, "qualities": "Organic, GMO-Free", "seller_id": 31},
-        {"name": "Free-Range Eggs", "price": 2.99, "quantity_desc": "12 count", "product_cat": "Dairy", "image_files": img_files_2 , "qualities": "Pasture Raised", "seller_id": 32},
+        {"name": "Grass Fed Himalayan Salted Ghee", "price": 12.49, "quantity_desc": "9.5 oz jar", "product_cat": "Pantry", "image_files": img_files_1, "qualities": "Organic, GMO-Free", "seller_id": 1},
+        {"name": "Free-Range Eggs", "price": 2.99, "quantity_desc": "12 count", "product_cat": "Dairy", "image_files": img_files_2 , "qualities": "Pasture Raised", "seller_id": 2},
     ]
 
     for product in product_data:
