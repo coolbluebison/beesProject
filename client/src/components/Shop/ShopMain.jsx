@@ -4,7 +4,7 @@ import ShopNav from "./ShopNav"
 import ShopFilter from "./ShopFilter"
 import ItemsContainer from "../ItemsContainer/ItemsContainer"
 
-export default function ShopMain(){
+export default function ShopMain({cart,setCart}){
 
     const [data, setData] = useState([])
 
@@ -21,7 +21,7 @@ export default function ShopMain(){
         {/* <ShopNav /> */}
         <div className="min-h-screen w-full bg-gray-200 relative px-40">
             {/* <ShopFilter /> */}
-            <ItemsContainer data={data} />
+            <ItemsContainer data={data} setCart={setCart} cart={cart}/>
 
         </div>
         </>

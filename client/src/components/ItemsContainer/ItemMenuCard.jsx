@@ -10,11 +10,20 @@ import { useNavigate } from 'react-router-dom';
 {/* <ItemMenuCard key={product.id} name={product.name} image_files={product.image_files} price={product.price} quantity_desc={product.quantity_desc}  /> */}
 
 
-export default function ItemMenuCard( {product_id, name, image_files, price, quantity_desc, seller_id }) {
+export default function ItemMenuCard( {product_id, name, image_files, price, quantity_desc, seller_id,setCart,cart }) {
     
     let pic = image_files[0]
 
     const navigate = useNavigate();
+
+    let cartItem = [
+        {product_id : product_id,
+        name : name,
+        image : image_files[0],
+        price : price,
+        quantity_desc : quantity_desc,
+        seller_id: seller_id}
+    ]
 
 
     const handleItemClick = () => {
@@ -70,7 +79,9 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
 
             {/* Buttons, maybe first button add to cart, second button autoship, check Tri's color scheme and edit - 20% */}
             <div className="mt-auto text-sm font-semibold flex-grow-0 flex-shrink-0" >
-                <p className="w-full bg-yellow my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2">Add To Cart <BsCart2 size={"1.1rem"}/> </p>
+                <p className="w-full bg-yellow my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2"
+                onClick={()=>setCart([...cart,cartItem])}
+                >Add To Cart <BsCart2 size={"1.1rem"}/> </p>
                 <p className="w-full bg-honey my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2"><RiLoopRightFill size={"1.1rem"}/>Autoship</p>
             </div>
         

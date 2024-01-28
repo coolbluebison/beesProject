@@ -23,7 +23,7 @@ import DrawerMain2 from "./NavBarComponents/DrawerMain2";
 
 
 
-export default function NavBar(){
+export default function NavBar({cart}){
 
     let [hidden,setHidden] = useState(false)
 
@@ -86,7 +86,7 @@ export default function NavBar(){
 
 },[ASHover])
 
-    let [cart,setCart] = useState(false)
+    // let [cart,setCart] = useState(false)
 
     let [sub,setSub] = useState(false)
     let [display,setDisplay] = useState(true)
@@ -94,7 +94,7 @@ export default function NavBar(){
 
     return(
         <>
-        <nav className={hidden ? "-translate-y-40 top-0 fixed transition-all duration-300 w-screen " : "top-0 transition-all duration-300 fixed z-50 w-screen font-lato"}>
+        <nav className={hidden ? "-translate-y-40 z-50 top-0 fixed transition-all duration-300 w-screen " : "top-0 transition-all duration-300 fixed z-50 w-screen font-lato"}>
             <Banner />
             <div className="drawer drawer-end">
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" onChange={()=>setDrawer(!drawer)}/>
@@ -111,7 +111,7 @@ export default function NavBar(){
 
                         </div>
                         <div className="flex justify-between gap-4 w-full items-center">
-                            <div className="w-[85%] flex bg-white rounded-md h-12 items-center px-4 shadow-md ">
+                            <div className="w-[85%] flex bg-white rounded-full h-12 items-center px-4 shadow-md ">
                                 <IoSearchOutline size={"1.5rem"}/>
                                 <input className="w-full h-10 bg-white outline-none mx-4 text-gray-800" placeholder="Search..."></input>
                             </div>
@@ -119,14 +119,14 @@ export default function NavBar(){
                             <span className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md"><RxAvatar size={"2rem"} onMouseOver={()=>setPHover(true)} onMouseLeave={()=>{setPHover(false)}}/></span>
                             <label className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md hover:bg-green-200"
                             htmlFor="my-drawer-4"
-                            >{cart ? <IoCloseOutline size={"2rem"}/>: <BsCart2 size={"2rem"}/> }</label>
+                            ><BsCart2 size={"2rem"}/></label>
                         </div>
                         </div>
                         
                     </div>
                     
                 </div> 
-                <DrawerMain2 />
+                <DrawerMain2 cart={cart}/>
                 {/* <DrawerMain setSub={setSub} sub={sub} setDisplay={setDisplay} display={display}/> */}
             </div>
             
