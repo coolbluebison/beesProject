@@ -94,7 +94,7 @@ export default function NavBar({cart}){
 
     return(
         <>
-        <nav className={hidden ? "-translate-y-40 top-0 fixed transition-all duration-300 w-screen " : "top-0 transition-all duration-300 fixed z-50 w-screen font-lato"}>
+        <nav className={hidden ? "-translate-y-40 z-50 top-0 fixed transition-all duration-300 w-screen " : "top-0 transition-all duration-300 fixed z-50 w-screen font-lato"}>
             <Banner />
             <div className="drawer drawer-end">
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" onChange={()=>setDrawer(!drawer)}/>

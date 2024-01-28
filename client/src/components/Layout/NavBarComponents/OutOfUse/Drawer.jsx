@@ -1,6 +1,6 @@
 import SubDrawer from "./SubDrawer"
-import DrawerMain from "./DrawerComponents/DrawerMain"
-import CategoryDrawer from "./DrawerComponents/CategoryDrawer"
+import DrawerMain from "../DrawerComponents/DrawerMain"
+import CategoryDrawer from "../DrawerComponents/CategoryDrawer"
 
 
 import { useState } from "react"
