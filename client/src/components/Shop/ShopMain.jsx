@@ -3,6 +3,7 @@ import React, {useState, useEffect} from "react"
 import ShopNav from "./ShopNav"
 import ShopFilter from "./ShopFilter"
 import ItemsContainer from "../ItemsContainer/ItemsContainer"
+import MenuSelectorMain from "../MenuSelectors/MenuSelectorMain"
 
 export default function ShopMain({cart,setCart}){
 
@@ -21,6 +22,17 @@ export default function ShopMain({cart,setCart}){
         {/* <ShopNav /> */}
         <div className="min-h-screen w-full bg-gray-200 relative px-40">
             {/* <ShopFilter /> */}
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <MenuSelectorMain />
             <ItemsContainer data={data} setCart={setCart} cart={cart}/>
 
         </div>
