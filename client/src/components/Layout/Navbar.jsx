@@ -21,6 +21,8 @@ import { IoCloseOutline } from "react-icons/io5";
 
 import DrawerMain2 from "./NavBarComponents/DrawerMain2";
 
+// trying to position the logo
+import Bees7 from "../../assets/Bees7.png";
 
 
 export default function NavBar({cart}){
@@ -102,7 +104,8 @@ export default function NavBar({cart}){
                     
                     <div className="w-full bg-[#fff3b2] h-[4.5rem] flex items-center justify-between px-10 shadow-sm" >
                         <div className="flex items-center w-[20%] justify-evenly">
-                        <p className="text-2xl font-bold text-black cursor-pointer">LOGO</p>
+                        {/* <p className="text-2xl font-bold text-black cursor-pointer">LOGO</p> */}
+                        <img className = "h-15 w-14" src={Bees7} />
                             <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiRedo size={"1.5rem"}/> Buy It Again</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><IoPricetagOutline size={"1.5rem"}/>Deals</label> */}
