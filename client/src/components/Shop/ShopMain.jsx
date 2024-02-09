@@ -9,12 +9,22 @@ export default function ShopMain({cart,setCart}){
 
     const [data, setData] = useState([])
 
+    // filter for main category
+    const [mainCategory, setMainCategory] = useState("")
+
+    // filter for subcategory
+
+    const [subCategory, setSubCategory] = useState("")
+
     useEffect( () => {
         fetch("http://127.0.0.1:5555/products")
         .then((response) => response.json())
         .then((file) => setData(file))
     }, []) 
     
+
+
+
 
     return (
         
@@ -26,14 +36,13 @@ export default function ShopMain({cart,setCart}){
             <br></br>
             <br></br>
             <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
 
-
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <MenuSelectorMain />
-            <ItemsContainer data={data} setCart={setCart} cart={cart}/>
+            <MenuSelectorMain setMainCategory ={setMainCategory} setSubCategory={setSubCategory} />
+            {/* only main category for right now */}
+            <ItemsContainer data={data} mainCategory={mainCategory} subCategory={subCategory} setCart={setCart} cart={cart}/>
 
         </div>
         </>

@@ -3,7 +3,7 @@ import React, {useState} from "react"
 // import Box from '@mui/material/Box';
 
 
-function MenuSelectorMain() {
+function MenuSelectorMain({setMainCategory, setSubCategory}) {
 
 
   const categoriesWithImages = {
@@ -142,6 +142,12 @@ function MenuSelectorMain() {
 
   const handleCategoryClick = (category) => {
       setActiveCategory(category);
+      setMainCategory(category)
+  };
+
+
+  const handleSubCategoryClick = (subcategory) => {
+      setSubCategory(subcategory)
   };
 
   return (
@@ -156,12 +162,12 @@ function MenuSelectorMain() {
           ) : (
               <div className="w-full flex flex-wrap justify-around items-center">
                   {categoriesWithImages[activeCategory].items.map((subcategory) => (
-                      <button key={subcategory} className="min-w-[145px] max-w-[145px] h-[130px] m-2 bg-white rounded-lg shadow p-2 flex flex-col items-center justify-center" onClick={() => alert(`Navigating to ${subcategory}`)}>
+                      <button key= {subcategory} className="min-w-[145px] max-w-[145px] h-[130px] m-2 bg-white rounded-lg shadow p-2 flex flex-col items-center justify-center" onClick = {() => handleSubCategoryClick (subcategory)}>
                           <img src={categoriesWithImages[activeCategory].subcategoryImages[subcategory]} alt={subcategory} className="w-full h-3/4 rounded-t-lg"/>
                           <div className="text-xs font-semibold w-full text-center bg-gray-300 rounded-b-lg">{subcategory}</div>
                       </button>
                   ))}
-                  <button className="mt-4 py-2 px-4 bg-red-500 text-white rounded" onClick={() => setActiveCategory(null)}>Back to Categories</button>
+                  {/* <button className="mt-4 py-2 px-4 bg-red-500 text-white rounded" onClick={() => handleSubCategoryClick(subcategory) }>Back to Categories</button> */}
               </div>
           )}
       </div>
