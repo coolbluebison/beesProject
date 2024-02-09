@@ -13,7 +13,7 @@ function ItemsContainer( { data,setCart,cart }) {
 
 
     return (
-        <Box className="padding" sx={{ flexGrow: 1, padding: '20%' }}>
+        <Box className="padding" sx={{ flexGrow: 1, padding: '10%' }}>
             <Grid container spacing={6}>
 
                 {

@@ -145,12 +145,12 @@ function MenuSelectorMain() {
   };
 
   return (
-      <div className="flex justify-around items-center bg-gray-200 px-24 py-5">
+      <div className="flex justify-around items-center bg-gray-200 px-24 py-5 gap-1">
           {activeCategory === null ? (
               Object.keys(categoriesWithImages).map((category) => (
                   <button key={category} className="min-w-[145px] max-w-[145px] h-[130px] bg-white rounded-lg shadow p-2 flex flex-col items-center justify-center" onClick={() => handleCategoryClick(category)}>
-                      <img src={categoriesWithImages[category].image} alt={category} className="w-full h-3/4 rounded-t-lg"/>
-                      <div className="text-xs font-semibold w-full text-center bg-gray-300 rounded-b-lg">{category}</div>
+                      <img src={categoriesWithImages[category].image} alt={category} className="w-full h-3/4 rounded-lg"/>
+                      <div className="text-xs font-semibold w-full text-center pt-1 bg-gray-300 rounded-b-lg">{category}</div>
                   </button>
               ))
           ) : (

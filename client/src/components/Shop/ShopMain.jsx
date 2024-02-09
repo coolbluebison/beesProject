@@ -20,7 +20,7 @@ export default function ShopMain({cart,setCart}){
         
         <>
         {/* <ShopNav /> */}
-        <div className="min-h-screen w-full bg-gray-200 relative px-40">
+        <div className="min-h-screen w-full bg-gray-200 relative px-32">
             {/* <ShopFilter /> */}
             <br></br>
             <br></br>

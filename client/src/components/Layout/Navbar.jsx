@@ -2,7 +2,7 @@ import { useState,useEffect } from "react";
 
 // component imports
 // import DrawerMain from "./NavBarComponents/Drawer"
-import Banner from "./NavBarComponents/Banner"
+// import Banner from "./NavBarComponents/Banner"
 import SubNav from "./NavBarComponents/SubNav"
 // import CartNav from "./NavBarComponents/CartNav";
 // import AutoshipNav from "./NavBarComponents/AutoshipNav";
@@ -27,23 +27,23 @@ import Bees7 from "../../assets/Bees7.png";
 
 export default function NavBar({cart}){
 
-    let [hidden,setHidden] = useState(false)
+    // let [hidden,setHidden] = useState(false)
 
-    var prevScrollpos = window.scrollY;
-    window.onscroll = function() {
-    var currentScrollPos = window.scrollY;
-    if (prevScrollpos > currentScrollPos) {
-        setHidden(false)
-    } else if (drawer){
-        setHidden(false)
-    } else {
-        setHidden(true)
-    }
-    prevScrollpos = currentScrollPos;
-    }
+    // var prevScrollpos = window.scrollY;
+    // window.onscroll = function() {
+    // var currentScrollPos = window.scrollY;
+    // if (prevScrollpos > currentScrollPos) {
+    //     setHidden(false)
+    // } else if (drawer){
+    //     setHidden(false)
+    // } else {
+    //     setHidden(true)
+    // }
+    // prevScrollpos = currentScrollPos;
+    // }
     
 
-    let [drawer,setDrawer] = useState(false)
+    // let [drawer,setDrawer] = useState(false)
 
     
 
@@ -96,10 +96,10 @@ export default function NavBar({cart}){
 
     return(
         <>
-        <nav className={hidden ? "-translate-y-40 z-50 top-0 fixed transition-all duration-300 w-screen " : "top-0 transition-all duration-300 fixed z-50 w-screen font-lato"}>
-            <Banner />
+        <nav className="top-0 transition-all duration-300 sticky z-50 w-full font-lato">
+            {/* <Banner /> */}
             <div className="drawer drawer-end">
-            <input id="my-drawer-4" type="checkbox" className="drawer-toggle" onChange={()=>setDrawer(!drawer)}/>
+            <input id="my-drawer-4" type="checkbox" className="drawer-toggle"/>
                 <div className="drawer-content">
                     
                     <div className="w-full bg-[#fff3b2] h-[4.5rem] flex items-center justify-between px-10 shadow-sm" >

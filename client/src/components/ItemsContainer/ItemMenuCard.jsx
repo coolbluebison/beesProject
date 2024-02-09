@@ -32,7 +32,7 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
 
 
     return (
-        <Box className="max-w-60 h-[450px] flex-shrink-0 flex flex-col">
+        <Box className="w-52 h-[450px] flex-shrink-0 flex flex-col ">
 
             <div id="gateway" onClick={handleItemClick}>
                 {/* this is inner div1, for the picture */}    
@@ -61,15 +61,15 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
 
                 {/* this is inner div2, rating maybe */}    
                 {/* Name, description etc. - 10%, Need to test this out with actual data and adjust later */}
-                <span className="flex-grow-0 flex-shrink-0 font-bold text-black py-2 " >
+                <span className="flex-grow-0 flex-shrink-0 font-bold text-black my-4 h-6" >
                     {name}
                 </span>
 
                 {/* Other details (15% ---- 3, 5%, quantity, farmers name and price) */}
                 <div className="flex flex-col flex-grow-0 flex-shrink-0" >
-                    <span className="font-medium text-sm py-0">{quantity_desc}</span>
-                    <span className="font-medium text-sm py-0">by Farmer Name</span>
-                    <span className="font-medium text-md py-4">${price}</span>
+                    <span className="font-medium text-xs py-0">{quantity_desc}</span>
+                    <span className="font-medium text-xs py-0">by Farmer Name</span>
+                    <span className="font-medium text-md py-4 mt-auto">${price}</span>
                 </div>
             </div>
 

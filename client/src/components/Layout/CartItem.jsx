@@ -12,7 +12,7 @@ export default function CartItem({item}){
                 <p className="text-sm">{i.quantity_desc}</p>
             </div>
             <div>
-                <select name="" id="" className="bg-white border-[1px] border-black w-10">
+                <select name="" id="" className="bg-white rounded-md border-[1px] border-black w-10">
                     <option value="someOption">1</option>
                     <option value="someOption">2</option>
                     <option value="someOption">3</option>
