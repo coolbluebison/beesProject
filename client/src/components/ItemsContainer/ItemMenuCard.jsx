@@ -32,7 +32,7 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
 
 
     return (
-        <Box className="w-52 h-[450px] flex-shrink-0 flex flex-col ">
+        <Box className="w-52 h-[400px] flex-shrink-0 flex flex-col ">
 
             <div id="gateway" onClick={handleItemClick}>
                 {/* this is inner div1, for the picture */}    
@@ -82,7 +82,7 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
                 <p className="w-full bg-yellow my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2"
                 onClick={()=>setCart([...cart,cartItem])}
                 >Add To Cart <BsCart2 size={"1.1rem"}/> </p>
-                <p className="w-full bg-honey my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2"><RiLoopRightFill size={"1.1rem"}/>Autoship</p>
+                {/* <p className="w-full bg-honey my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2"><RiLoopRightFill size={"1.1rem"}/>Autoship</p> */}
             </div>
         
         </Box>

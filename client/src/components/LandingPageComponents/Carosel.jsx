@@ -25,7 +25,7 @@ export default function Carousel(){
 
 
     return(
-        <div className="overflow-hidden relative mx-0   md:h-[40rem]">
+        <div className="overflow-hidden relative mx-0   md:h-[34rem]">
             <div
                 className={`flex transition ease-out duration-500 `}
                 style={{
@@ -35,25 +35,22 @@ export default function Carousel(){
                 {slides.map(s => <img src={s}/>)}
             </div>
 
-        <div className="absolute flex justify-center items-center text-center md:text-left h-full p-5 md:pl-20 top-0 w-full md:w-[40%] ">
-            <div >
-                <h1 className="text-lg md:text-4xl text-gray-200 pb-2 md:pb-16 font-semibold ">Get Started and Enjoy the Best Savings on Organic Farm Fresh Food</h1>
-                <a
-                href="#"
-                className="flex-none rounded-md bg-pink-400 px-4 py-1.5 text-sm md:text-lg font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-                >
-                Save Now 
-                </a>
-                <a
-                href="#"
-                className="flex-none m-2 rounded-md bg-pink-400 px-4 py-1.5 text-sm md:text-lg font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-                >
-                Shop Local 
-                </a>
+        <div className="absolute flex justify-center items-center text-center md:text-left h-full p-5 md:pl-28 top-0 w-full md:w-[55%] ">
+            <div  className="bg-honey p-10 h-3/4 ">
+                <h1 className="text-2xl md:text-4xl text-gray-200 font-semibold ">Get Started and Enjoy the Best Savings on Organic Farm Fresh Food</h1>
+                <p className="w-1/2 py-12">2gyIPUsvrlpuJqbdsxh7Urkjhklhklhjklhkjhkhklhjklhjklhjklhghhjggjghghkgkjg ghhjgkhjg hjghjgghj </p>
+                <div className="mt-auto">
+                    <a
+                    href="#"
+                    className="mt-auto flex-none rounded-sm bg-yellow px-8 py-4 font-semibold text-white shadow-sm"
+                    >
+                    Shop Now 
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+        {/* <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
             {slides.map((s, i) => {
             return (
                 <div
@@ -67,7 +64,7 @@ export default function Carousel(){
                 ></div>
             );
             })}
-        </div>
+        </div> */}
 
         </div>
 

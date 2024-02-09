@@ -12,7 +12,7 @@ export default function DrawerMain2({cart}){
             {cart.map(i => <CartItem item={i}/>)}
             
             <div className="mt-auto p-4">
-                <button className="w-full px-4 py-3 bg-black uppercase text-white rounded-full hover:bg-olive transition-all">Checkout</button>
+                <button className="w-full px-4 py-3 bg-black uppercase text-white rounded-md hover:bg-olive transition-all">Checkout</button>
             </div>
 
         </ul>

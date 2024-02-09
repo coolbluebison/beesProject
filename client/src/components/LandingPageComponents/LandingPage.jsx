@@ -2,6 +2,7 @@ import React from "react"
 
 import Carousel from "./Carosel"
 import GroceryNav from "./GroceryNav"
+import MenuSelectorMain from "../MenuSelectors/MenuSelectorMain"
 import CTA from "./CTA"
 
 function LandingPage() {
@@ -12,7 +13,8 @@ function LandingPage() {
       <div className="bg-white">
 
         <Carousel />
-        <GroceryNav />
+        {/* <GroceryNav /> */}
+        <MenuSelectorMain />
         <CTA />
         
         

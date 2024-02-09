@@ -10,7 +10,7 @@ export default function Rootlayout({cart}){
 
     return(
         <>
-        <Banner />
+        {nav.pathname !== '/login' ? <Banner /> : null }
         {nav.pathname !== '/login' ? <NavBar cart={cart}/> : null }
         <Outlet />
         {nav.pathname !== '/login'? <Footer /> : null }
