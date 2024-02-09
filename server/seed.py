@@ -117,7 +117,7 @@ def seed_products():
         {"name": "Quinoa", "price": 4.99, "quantity_desc": "2 lbs bag", "product_cat": "Pantry & Staples", "sub_cat": "Grains", "image_files": img_files_7, "qualities": qualities_1, "seller_id": 1},
         {"name": "Kale Chips", "price": 3.99, "quantity_desc": "5 oz bag", "product_cat": "Snacks & Bars", "sub_cat": "Snacks", "image_files": img_files_8, "qualities": qualities_1, "seller_id": 2},
         {"name": "Cold Pressed Olive Oil", "price": 11.99, "quantity_desc": "500 ml bottle", "product_cat": "Pantry & Staples", "sub_cat": "Oils and Vinegars", "image_files": img_files_9, "qualities": qualities_1, "seller_id": 1},
-        {"name": "Spicy Salsa Sauce", "price": 5.49, "quantity_desc": "16 oz jar", "product_cat": "Pantry & Staples", "image_files": img_files_10, "qualities": qualities_1, "seller_id": 1},
+        {"name": "Spicy Salsa Sauce", "price": 5.49, "quantity_desc": "16 oz jar", "product_cat": "Pantry & Staples", "sub_cat": "Condiments", "image_files": img_files_10, "qualities": qualities_1, "seller_id": 1},
 
         # batch 2
         {"name": "Chia Seeds", "price": 6.49, "quantity_desc": "1 lbs bag", "product_cat": "Pantry & Staples", "sub_cat": "Packaged Goods", "image_files": img_files_11, "qualities": qualities_1, "seller_id": 1},
@@ -170,7 +170,7 @@ def seed_products():
     ]
 
     for product in product_data:
-        new_product = Product(name=product['name'], price=product['price'], quantity_desc=product['quantity_desc'], product_cat=product['product_cat'], image_files=product['image_files'], qualities=product['qualities'], seller_id = product["seller_id"])
+        new_product = Product(name=product['name'], price=product['price'], quantity_desc=product['quantity_desc'], product_cat=product['product_cat'], sub_cat=product['sub_cat'], image_files=product['image_files'], qualities=product['qualities'], seller_id = product["seller_id"])
 
         db.session.add(new_product)
 
