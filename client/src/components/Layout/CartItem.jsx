@@ -1,30 +1,30 @@
-
+import { useState } from "react"
 
 export default function CartItem({item}){
 
     let i = item[0]
+    let [amount,setAmount] = useState(1)
 
     return(
+        <>
         <div className="w-full flex justify-evenly gap-4 h-20 mt-4 ">
-            <img src={i.image} alt={i.name} className=" h-20 w-20  border-[1px] border-black rounded-lg"/>
-            <div className="w-1/3">
-                <p className="text-sm">{i.name}</p>
-                <p className="text-sm">{i.quantity_desc}</p>
+            <img src={i.image} alt={i.name} className=" h-20 w-20  border-[1px] border-honey rounded-sm"/>
+            <div className="w-1/3 ">
+                <p className="text-sm text-ellipsis text-nowrap">{i.name}</p>
+                <p className="text-xs text-olive">Size: {i.quantity_desc}</p>
+                <p className="pt-4 text-sm">
+                    <span className="px-2 cursor-pointer" onClick={()=>setAmount(amount-1)}>-</span>
+                    {amount}
+                    <span className="px-2 cursor-pointer" onClick={()=>setAmount(amount+1)}>+</span>
+                </p>
             </div>
             <div>
-                <select name="" id="" className="bg-white rounded-md border-[1px] border-black w-10">
-                    <option value="someOption">1</option>
-                    <option value="someOption">2</option>
-                    <option value="someOption">3</option>
-                    <option value="someOption">4</option>
-                    <option value="someOption">5</option>
-                    <option value="someOption">6</option>
-                    <option value="someOption">7</option>
-                    <option value="someOption">8</option>
-                    <option value="otherOption">9</option>
-                </select>
-                <p></p>
+                <p>${i.price}</p>
+                <p className="mt-8 text-sm underline cursor-pointer">Remove</p>
             </div>
+
         </div>
+        <p className="w-full h-[1px] bg-honey my-4"></p>
+        </>
     )
 }
