@@ -9,7 +9,7 @@ import SubNav from "./NavBarComponents/SubNav"
 // import AutoshipNav from "./NavBarComponents/AutoshipNav";
 // import Checkout from "../Checkout/Checkout";
 import ProfileNav from "./NavBarComponents/ProfileNav";
-
+import SubMenu from "./NavBarComponents/SubMenu";
 // icon imports
 import { CiMenuBurger } from "react-icons/ci";
 // import { CiRedo } from "react-icons/ci";
@@ -19,6 +19,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { RxAvatar } from "react-icons/rx";
 import { BsCart2 } from "react-icons/bs";
 import { IoCloseOutline } from "react-icons/io5";
+import { BsFillBasket3Fill } from "react-icons/bs";
 
 import DrawerMain2 from "./NavBarComponents/DrawerMain2";
 
@@ -93,9 +94,10 @@ export default function NavBar({cart}){
 
     // let [cart,setCart] = useState(false)
 
-    let [sub,setSub] = useState(false)
-    let [display,setDisplay] = useState(true)
+    // let [sub,setSub] = useState(false)
+    // let [display,setDisplay] = useState(true)
     
+    let [subMenu,setSubMenu] = useState(false)
 
     return(
         <>
@@ -108,8 +110,12 @@ export default function NavBar({cart}){
                     <div className="w-full bg-[#fff3b2] h-[4.5rem] flex items-center justify-between px-10 shadow-sm" >
                         <div className="flex items-center w-[20%] justify-evenly">
                         {/* <p className="text-2xl font-bold text-black cursor-pointer">LOGO</p> */}
-                        <img className = "cursor-pointer w-16" src={Bees7} onClick={()=>nav("/")}/>
-                            <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label>
+                        <img className = "cursor-pointer h-[3.5rem] " src={Bees7} onClick={()=>nav("/")}/>
+                            <div className="">
+                                <p>Bees In</p>
+                                <p>Baskets</p>
+                            </div>
+                            {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiRedo size={"1.5rem"}/> Buy It Again</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><IoPricetagOutline size={"1.5rem"}/>Deals</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2" onMouseOver={()=>{setASHover(true)}} onMouseLeave={()=>{setASHover(false)}}><RiLoopRightFill size={"1.5rem"}/> Autoship</label> */}
@@ -122,10 +128,10 @@ export default function NavBar({cart}){
                                 <input className="w-full h-10 bg-white outline-none mx-4 text-gray-800" placeholder="Search..."></input>
                             </div>
                         <div className="flex w-[20%] justify-evenly">
-                            <span className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md"><RxAvatar size={"2rem"} onMouseOver={()=>setPHover(true)} onMouseLeave={()=>{setPHover(false)}}/></span>
+                            <span className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md"><RxAvatar size={"2.3rem"} onMouseOver={()=>setPHover(true)} onMouseLeave={()=>{setPHover(false)}}/></span>
                             <label className="h-12 w-12 bg-white rounded-full hover:scale-110 transition-all duration-200 items-center flex justify-center text-gray-700 shadow-md hover:bg-green-200"
                             htmlFor="my-drawer-4"
-                            ><BsCart2 size={"2rem"}/></label>
+                            ><BsFillBasket3Fill size={"2rem"}/></label>
                         </div>
                         </div>
                         
@@ -139,8 +145,9 @@ export default function NavBar({cart}){
             {/* <AutoshipNav ASDisplay={ASDisplay} setASHover={setASHover}/> */}
             {/* <CartNav cartHover={cartDisplay} setCartHover={setCartHover}/> */}
             <ProfileNav pHover={pDisplay} setPHover={setPHover}/>
-            <SubNav setSub={setSub} setDisplay={setDisplay}/>
+            <SubNav setSubMenu={setSubMenu} subMenu={subMenu}/>
             {/* <Checkout cart={cart} /> */}
+            <SubMenu subMenu={subMenu}/>
         </nav>
         </>
     )

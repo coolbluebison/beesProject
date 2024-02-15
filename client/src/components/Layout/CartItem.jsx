@@ -10,7 +10,7 @@ export default function CartItem({item}){
         <div className="w-full flex justify-evenly gap-4 h-20 mt-4 ">
             <img src={i.image} alt={i.name} className=" h-20 w-20  border-[1px] border-honey rounded-sm"/>
             <div className="w-1/3 ">
-                <p className="text-sm text-ellipsis text-nowrap">{i.name}</p>
+                <p className="text-sm truncate">{i.name}</p>
                 <p className="text-xs text-olive">Size: {i.quantity_desc}</p>
                 <p className="pt-4 text-sm">
                     <span className="px-2 cursor-pointer" onClick={()=>setAmount(amount-1)}>-</span>
@@ -24,7 +24,7 @@ export default function CartItem({item}){
             </div>
 
         </div>
-        <p className="w-full h-[1px] bg-honey my-4"></p>
+        <p className="w-full h-[1px] bg-honey mt-4"></p>
         </>
     )
 }

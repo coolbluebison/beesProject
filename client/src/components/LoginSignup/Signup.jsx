@@ -58,7 +58,7 @@ export default function SignupComponent(){
                     </div>
                 </div>
 
-                <p className="w-full text-center text-xl my-12 py-2 rounded-full hover:bg-rose-600 shadow-md bg-rose-500 cursor-pointer text-black tracking-wider">Sign Up</p>
+                <p className="w-full text-center text-xl my-12 py-2 rounded-full hover:bg-rose-600 shadow-md bg-honey cursor-pointer text-black tracking-wider">Sign Up</p>
 
                 {/* <p className="text-sm text-center py-2">Or Continue With</p>
 
