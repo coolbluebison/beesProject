@@ -19,7 +19,7 @@ export default function CartItem({item}){
                 </p>
             </div>
             <div>
-                <p>${i.price}</p>
+                <p>${Math.round((i.price * amount)*100)/100}</p>
                 <p className="mt-8 text-sm underline cursor-pointer">Remove</p>
             </div>
 

@@ -23,7 +23,7 @@ export default function ShopMain({cart,setCart}){
         <div className="min-h-screen w-full bg-gray-200 relative px-32">
             {/* <ShopFilter /> */}
             <br></br>
-            <br></br>
+            {/* <br></br>
             <br></br>
             <br></br>
 
@@ -31,7 +31,7 @@ export default function ShopMain({cart,setCart}){
             <br></br>
             <br></br>
             <br></br>
-            <br></br>
+            <br></br> */}
             <MenuSelectorMain />
             <ItemsContainer data={data} setCart={setCart} cart={cart}/>
 
