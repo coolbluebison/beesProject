@@ -71,6 +71,7 @@ class Product(db.Model, SerializerMixin):
     # for example '10 ounce can', '1 lbs package'
     quantity_desc = db.Column(db.String)
     product_cat = db.Column(db.String)
+    sub_cat = db.Column(db.String)
     # product_images
     image_files = db.Column(db.String)
     # for exam le grass-fed, organic etc.

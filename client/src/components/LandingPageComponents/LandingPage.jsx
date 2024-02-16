@@ -5,6 +5,8 @@ import GroceryNav from "./GroceryNav"
 import MenuSelectorMain from "../MenuSelectors/MenuSelectorMain"
 import CTA from "./CTA"
 
+import BrandingBanner from "./BrandingBanner"
+
 function LandingPage() {
 
 
@@ -15,6 +17,10 @@ function LandingPage() {
         <Carousel />
         {/* <GroceryNav /> */}
         <MenuSelectorMain />
+        <br></br>
+        <br></br>
+        <br></br>
+        <BrandingBanner />
         <CTA />
         
         
