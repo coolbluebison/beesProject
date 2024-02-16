@@ -25,20 +25,21 @@ export default function Carousel(){
 
 
     return(
-        <div className="overflow-hidden relative mx-0   md:h-[34rem]">
+        <div className="overflow-hidden relative mx-0 h-[34rem] w-full">
             <div
-                className={`flex transition ease-out duration-500 `}
+                className={`flex transition ease-out duration-500`}
                 style={{
-                transform: `translateX(-${current * 100}%)`,
+                transform: `translateX(-${current * (100 / slides.length)}%)`,
+                width: `${slides.length * 100}%`
                 }}
             >
-                {slides.map(s => <img src={s}/>)}
+                {slides.map(s => <img src={s} className="h-full w-screen" key={s}/>)}
             </div>
 
         <div className="absolute flex justify-center items-center text-center md:text-left h-full p-5 md:pl-28 top-0 w-full md:w-[55%] ">
             <div  className="bg-honey p-10 h-3/4 ">
-                <h1 className="text-2xl md:text-4xl text-gray-200 font-semibold ">Get Started and Enjoy the Best Savings on Organic Farm Fresh Food</h1>
-                <p className="w-1/2 py-12">2gyIPUsvrlpuJqbdsxh7Urkjhklhklhjklhkjhkhklhjklhjklhjklhghhjggjghghkgkjg ghhjgkhjg hjghjgghj </p>
+                <h1 className="text-2xl md:text-4xl font-semibold ">Get Started and Enjoy the Best Savings on Organic Farm Fresh Food</h1>
+                <p className="w-1/2 py-12">2gyIPUsvrlpuJqbdsxh7Urkjhklhklhjklhkjhkhklhjklhjklhjklhghhjggjghgasdfhkgkjg ghhjgkhjg hjghjgghj </p>
                 <div className="mt-auto">
                     <a
                     href="#"
