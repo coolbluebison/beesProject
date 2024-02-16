@@ -38,7 +38,7 @@ export default function Carousel(){
         <div className="absolute flex justify-center items-center text-center md:text-left h-full p-5 md:pl-28 top-0 w-full md:w-[55%] ">
             <div  className="bg-honey p-10 h-3/4 ">
                 <h1 className="text-2xl md:text-4xl text-gray-200 font-semibold ">Get Started and Enjoy the Best Savings on Organic Farm Fresh Food</h1>
-                <p className="w-1/2 py-12">2gyIPUsvrlpuJqbdsxh7Urkjhklhklhjklhkjhkhklhjklhjklhjklhghhjggjghghkgkjg ghhjgkhjg hjghjgghj </p>
+                <p className="w-1/2 py-12 font-bold">Produced with care by your Local Farmers and Producers, delivered to you by our bees</p>
                 <div className="mt-auto">
                     <a
                     href="#"
