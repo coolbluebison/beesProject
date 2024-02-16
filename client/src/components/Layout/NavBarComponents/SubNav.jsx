@@ -3,22 +3,19 @@ import { useState } from "react"
 export default function SubNav({setDisplay,setSub}){
 
     let categories = [
-        "Bees N Bread Specials",
-        "Holiday & More",
+        "Bees In Baset Specials",
         "New",
         "Meat & Seafood",
-        "Pantry",
-        "Snacks, Bars & Treats",
+        "Dairy & Eggs",
+        "Pantry & Staples",
+        "Baked Goods",
+        "Snacks & Bars",
+        "Coffee",
         "Beverages",
-        "Frozen",
-        "Wine",
         "Babies & Kids",
-        "Health",
         "Personal Care",
-        "Household",
-        "Pet",
-        "Exclusives",
-        "Gifts"
+        "Pets",
+        "Household"
     ]
 
     function onClick(){
