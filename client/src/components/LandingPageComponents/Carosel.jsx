@@ -42,7 +42,7 @@ export default function Carousel(){
                 <div className="mt-auto">
                     <a
                     href="#"
-                    className="mt-auto flex-none rounded-sm bg-yellow px-8 py-4 font-semibold text-white shadow-sm"
+                    className="mt-auto flex-none rounded-sm bg-yellow px-8 py-4 text-[#4e461b] font-extrabold shadow-sm"
                     >
                     Shop Now 
                     </a>

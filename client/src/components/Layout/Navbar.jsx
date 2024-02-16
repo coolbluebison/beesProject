@@ -112,8 +112,8 @@ export default function NavBar({cart}){
                         {/* <p className="text-2xl font-bold text-black cursor-pointer">LOGO</p> */}
                         <img className = "cursor-pointer h-[3.5rem] " src={Bees7} onClick={()=>nav("/")}/>
                             <div className="">
-                                <p>Bees In</p>
-                                <p>Baskets</p>
+                                {/* <p className="font-extrabold text-lg">Bees In</p>
+                                <p className="font-extrabold text-lg" >Baskets</p> */}
                             </div>
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiMenuBurger size={"1.5rem"}/>Menu</label> */}
                             {/* <label className="text-2xl font-semibold text-gray-800 cursor-pointer flex items-center gap-2"><CiRedo size={"1.5rem"}/> Buy It Again</label> */}
