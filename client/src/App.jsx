@@ -17,6 +17,8 @@ import Login from './components/LoginSignup/Login';
 
 import ShopMain from './components/Shop/ShopMain';
 
+import Checkout from './components/Checkout/Checkout';
+
 
 
 
@@ -33,9 +35,12 @@ function App() {
           <Route path="/deals" element= { <Deals /> } />
           <Route path='/login' element= { <Login />} />
           <Route path='/shop' element=  { <ShopMain cart={cart} setCart={setCart}/>} />
+          <Route path='/checkout' element= {<Checkout cart={cart} setCart={setCart}/>} />
       </Route>
     )
   )
+
+  console.log(cart)
 
 
   return (

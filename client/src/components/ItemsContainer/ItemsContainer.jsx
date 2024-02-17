@@ -15,12 +15,12 @@ function ItemsContainer( {data, mainCategory, subCategory, setCart,cart }) {
         // Filter by subCategory 
         const subCategoryMatch = subCategory ? item.sub_cat === subCategory : true;
 
-        console.log(`Item main_cat: ${item.product_cat}, Filter mainCategory: ${mainCategory}`);
-        console.log(`Item sub_cat: ${item.sub_cat}, Filter subCategory: ${subCategory}`);
+        // console.log(`Item main_cat: ${item.product_cat}, Filter mainCategory: ${mainCategory}`);
+        // console.log(`Item sub_cat: ${item.sub_cat}, Filter subCategory: ${subCategory}`);
 
 
-        console.log(mainCategoryMatch)
-        console.log(subCategoryMatch)
+        // console.log(mainCategoryMatch)
+        // console.log(subCategoryMatch)
         return mainCategoryMatch && subCategoryMatch ; //
         
     });
