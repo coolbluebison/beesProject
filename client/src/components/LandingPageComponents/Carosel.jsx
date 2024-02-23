@@ -1,6 +1,9 @@
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Carousel(){
+
+    let nav = useNavigate()
 
     let slides = [
         "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
@@ -42,8 +45,8 @@ export default function Carousel(){
                 <p className="w-1/2 py-12 font-bold">Produced with care by your Local Farmers and Producers, delivered to you by our bees</p>
                 <div className="mt-auto">
                     <a
-                    href="#"
-                    className="mt-auto flex-none rounded-sm bg-yellow px-8 py-4 font-semibold text-white shadow-sm"
+                    onClick={()=>nav("/shop")}
+                    className="mt-auto flex-none rounded-sm bg-yellow px-8 py-4 font-semibold text-white shadow-sm cursor-pointer select-none"
                     >
                     Shop Now 
                     </a>

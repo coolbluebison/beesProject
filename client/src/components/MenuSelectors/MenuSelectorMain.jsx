@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import { useNavigate } from "react-router-dom";
 
 // import Box from '@mui/material/Box';
 
@@ -138,6 +139,7 @@ function MenuSelectorMain({setMainCategory, setSubCategory}) {
       
   };
 
+  let nav = useNavigate()
   const [activeCategory, setActiveCategory] = useState(null);
 
   const handleCategoryClick = (category) => {
@@ -146,8 +148,11 @@ function MenuSelectorMain({setMainCategory, setSubCategory}) {
   };
 
 
+
+
   const handleSubCategoryClick = (subcategory) => {
-      setSubCategory(subcategory)
+    nav(`/shop`)
+    setSubCategory(subcategory)
   };
 
   return (
