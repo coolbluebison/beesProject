@@ -142,6 +142,7 @@ function MenuSelectorMain({setMainCategory, setSubCategory}) {
 
   const handleCategoryClick = (category) => {
       setActiveCategory(category);
+      console.log("this is category",category)
       setMainCategory(category)
   };
 

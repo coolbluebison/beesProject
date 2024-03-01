@@ -5,7 +5,7 @@ import ShopFilter from "./ShopFilter"
 import ItemsContainer from "../ItemsContainer/ItemsContainer"
 import MenuSelectorMain from "../MenuSelectors/MenuSelectorMain"
 
-export default function ShopMain({cart,setCart}){
+export default function ShopMain({cart, setCart}){
 
     const [data, setData] = useState([])
 
@@ -13,7 +13,6 @@ export default function ShopMain({cart,setCart}){
     const [mainCategory, setMainCategory] = useState("")
 
     // filter for subcategory
-
     const [subCategory, setSubCategory] = useState("")
 
     useEffect( () => {
@@ -22,8 +21,6 @@ export default function ShopMain({cart,setCart}){
         .then((file) => setData(file))
     }, []) 
     
-
-
 
 
     return (
@@ -39,8 +36,8 @@ export default function ShopMain({cart,setCart}){
             <br></br>
             <br></br>
             <br></br>
-            <MenuSelectorMain />
-            <ItemsContainer data={data} setCart={setCart} cart={cart}/>
+            <MenuSelectorMain setMainCategory = {setMainCategory} setSubCategory = {setSubCategory} />
+            <ItemsContainer data={data} mainCategory={mainCategory} subCategory={subCategory} setCart={setCart} cart={cart}/>
 
         </div>
         </>

@@ -16,8 +16,8 @@ function LandingPage() {
 
         <Carousel />
         {/* <GroceryNav /> */}
-        <MenuSelectorMain />
         <br></br>
+        <MenuSelectorMain />
         <br></br>
         <br></br>
         <BrandingBanner />
