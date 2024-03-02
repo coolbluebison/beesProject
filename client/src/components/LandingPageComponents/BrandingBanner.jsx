@@ -4,6 +4,8 @@ import React from "react";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+
 
 function BrandingBanner(){
 
@@ -44,7 +46,6 @@ function BrandingBanner(){
                         <h7 className="text-lg font-extrabold">Access to local, high quality food is often inaccessible, fragmented and inconvenient </h7>
                         </Box>
                         <Box className="h-[75%] bg-cover bg-center rounded-b-lg" style={{ backgroundImage: `url(https://images.pexels.com/photos/6946499/pexels-photo-6946499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)` }}>
-                            {/* second img */}
                         </Box>
                     </Box>
                     
@@ -54,18 +55,69 @@ function BrandingBanner(){
                         <h7 className="text-lg font-extrabold">Traditional Farmers Markets Offers Best Solution for Our Communities</h7>
                         </Box>
                         <Box className="h-[75%] bg-cover bg-center rounded-b-lg" style={{ backgroundImage: `url(https://images.pexels.com/photos/6165051/pexels-photo-6165051.jpeg?auto=compress&cs=tinysrgb&w=600)` }}>
-                            {/* place for third img */}
                         </Box>
                     </Box>
                 </Box>
                 
                 <Paper elevation={1}  sx={{backgroundColor: '#fff2cc'}} className="h-[10%] bg-[#fff2cc] flex justify-center items-center">
-                <h6 className="text-lg md:text-2xl text-black font-bold">Make Shopping for Local, High-Quality, Fresh Food As Easy as A Few Clicks</h6>    
+                    <h6 className="text-lg md:text-2xl text-black font-bold">Make Shopping for Local, High-Quality, Fresh Food As Easy as A Few Clicks</h6>    
                 </Paper>
             
-            </Box>        
-        </>
+            </Box>   
 
+
+            <Box sx={{ flexGrow: 1, overflow: 'hidden', px: 3 }}>
+                <Paper sx={{ maxWidth: 936, my: 1, mx: 'auto', p: 2, borderRadius: '16px' }}>
+                    <Grid container wrap="nowrap" spacing={2}>
+                    <Grid item xs={12} sm={4}>
+                        <Box
+                            sx={{
+                                width: '100%',
+                                height: 200,
+                                backgroundColor: 'primary.light',
+                                borderRadius: '8px',
+                            }}
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={8}>
+                        <Typography>
+                        Shopping local builds and strengthens the backbone of our communities. By choosing local
+                        businesses, we support our neighbors and create a vibrant, interconnected community. This approach
+                        not only fosters economic growth but also promotes a sustainable and resilient local economy.
+                        </Typography>
+                    </Grid>
+                    </Grid>
+                </Paper>
+
+                <br></br>
+
+                <Paper sx={{ maxWidth: 936, my: 1, mx: 'auto', p: 2, borderRadius: '16px' }}>
+                    <Grid container wrap="nowrap" spacing={2}>
+                    <Grid item xs={12} sm={8}>
+                        <Typography>
+                        We prioritize working with producers that adhere to our code of conduct and standards, which include
+                        animal welfare first, organic produce whenever possible, and a commitment to sustainability. By
+                        maintaining these standards, we ensure that our products are not only beneficial to our consumers
+                        but also to the environment and society at large.
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                        <Box
+                        sx={{
+                            width: '100%',
+                            height: 200,
+                            backgroundColor: 'primary.light',
+                            borderRadius: '8px',
+                        }}
+                            // <img src='' />
+                        />
+                    </Grid>
+                    </Grid>
+                </Paper>
+            </Box>
+
+
+        </>
 
     )
 }
