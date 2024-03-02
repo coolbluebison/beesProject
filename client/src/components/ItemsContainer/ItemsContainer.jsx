@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import ItemMenuCard from "./ItemMenuCard";
 import ShopFilter from '../Shop/ShopFilter';
+import { FaChevronRight } from "react-icons/fa";
 
 function ItemsContainer( {data, mainCategory, subCategory, setCart,cart,setMainCategory,setSubCategory }) {
 
@@ -41,7 +42,9 @@ function ItemsContainer( {data, mainCategory, subCategory, setCart,cart,setMainC
         <Box className="w-2/3" sx={{ flexGrow: 1, padding: '5%' }}>
             <div className='flex gap-3 underline text-sm z-40 mb-10 pl-12 items-center'>
                 <p className='cursor-pointer p-2' onClick={home}>All Products</p>
+                {mainCategory !== "" ? <FaChevronRight /> : null}
                 <p className='cursor-pointer p-2' onClick={()=>setSubCategory("")}>{mainCategory}</p>
+                {subCategory !== "" ? <FaChevronRight /> : null}
                 <p className='cursor-pointer p-2'>{subCategory}</p>
             </div>
            

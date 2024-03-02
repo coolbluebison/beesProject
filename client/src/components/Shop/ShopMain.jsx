@@ -35,7 +35,7 @@ export default function ShopMain({cart, setCart}){
             <br></br>
             <br></br>
             <br></br>
-            <MenuSelectorMain setMainCategory = {setMainCategory} setSubCategory = {setSubCategory} />
+            <MenuSelectorMain setMainCategory = {setMainCategory} setSubCategory = {setSubCategory} mainCategory={mainCategory} subCategory={subCategory}/>
             <ItemsContainer data={data} mainCategory={mainCategory} subCategory={subCategory} setMainCategory={setMainCategory} setSubCategory={setSubCategory} setCart={setCart} cart={cart}/>
 
         </div>

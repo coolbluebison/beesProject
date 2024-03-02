@@ -1,10 +1,10 @@
-import React, {useState} from "react"
+import React, {useState,useEffect} from "react"
 import { useNavigate } from "react-router-dom";
 
 // import Box from '@mui/material/Box';
 
 
-function MenuSelectorMain({setMainCategory, setSubCategory}) {
+function MenuSelectorMain({setMainCategory, setSubCategory ,mainCategory, subCategory}) {
 
 
   const categoriesWithImages = {
@@ -149,12 +149,18 @@ function MenuSelectorMain({setMainCategory, setSubCategory}) {
   };
 
 
-
-
   const handleSubCategoryClick = (subcategory) => {
     nav(`/shop`)
     setSubCategory(subcategory)
   };
+
+  useEffect(()=>{
+    mainCategory === "" ? setActiveCategory(null) : null
+  },[mainCategory])
+
+//   useEffect(()=>{
+//     subCategory === "" ? setActiveCategory(mainCategory) : null
+//   },[subCategory])
 
   return (
       <div className="flex justify-around items-center bg-gray-200 px-24 py-5 gap-1">
