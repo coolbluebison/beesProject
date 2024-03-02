@@ -2,8 +2,8 @@
 
 export default function ShopFilter(){
     return(
-        <div className="absolute bg-red-100 bottom-0 right-32 h-40 w-40">
-            {/* <p className="text-center">Filter By Category</p> */}
+        <div className="sticky bg-honey left-6 top-32 h-[80vh] w-1/4 mt-20">
+          FIlter
         </div>
     )
 }

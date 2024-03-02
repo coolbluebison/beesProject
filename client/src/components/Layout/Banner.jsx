@@ -8,7 +8,7 @@ export default function Banner() {
 
   return (
     <div className={open?
-      "relative h-10 bg-honey isolate flex items-center gap-x-6 overflow-hidden bg-green-100 px-6 py-1 sm:px-1 sm:before:flex-1 transition-all duration-500":
+      "relative h-10 z-50 bg-honey isolate flex items-center gap-x-6 overflow-hidden bg-green-100 px-6 py-1 sm:px-1 sm:before:flex-1 transition-all duration-500":
       "relative h-0 transition-all"
     }
     

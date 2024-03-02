@@ -27,8 +27,7 @@ export default function ShopMain({cart, setCart}){
         
         <>
         {/* <ShopNav /> */}
-        <div className="min-h-screen w-full bg-gray-200 relative px-32">
-            {/* <ShopFilter /> */}
+        <div className="min-h-screen w-full bg-gray-200 relative">
             <br></br>
             <br></br>
             <br></br>
@@ -37,7 +36,7 @@ export default function ShopMain({cart, setCart}){
             <br></br>
             <br></br>
             <MenuSelectorMain setMainCategory = {setMainCategory} setSubCategory = {setSubCategory} />
-            <ItemsContainer data={data} mainCategory={mainCategory} subCategory={subCategory} setCart={setCart} cart={cart}/>
+            <ItemsContainer data={data} mainCategory={mainCategory} subCategory={subCategory} setMainCategory={setMainCategory} setSubCategory={setSubCategory} setCart={setCart} cart={cart}/>
 
         </div>
         </>

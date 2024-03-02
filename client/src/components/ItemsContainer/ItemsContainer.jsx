@@ -2,8 +2,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import ItemMenuCard from "./ItemMenuCard";
+import ShopFilter from '../Shop/ShopFilter';
 
-function ItemsContainer( {data, mainCategory, subCategory, setCart,cart }) {
+function ItemsContainer( {data, mainCategory, subCategory, setCart,cart,setMainCategory,setSubCategory }) {
 
 
     // this is where to filter the data (in progress / later)
@@ -29,15 +30,28 @@ function ItemsContainer( {data, mainCategory, subCategory, setCart,cart }) {
 
     let filtered_data = filteredData
 
+    function home(){
+        setMainCategory("")
+        setSubCategory("")
+    }
 
     return (
-        <Box className="padding" sx={{ flexGrow: 1, padding: '10%' }}>
-            <Grid container spacing={6}>
-
+        <div className='flex relative w-full'>
+        <ShopFilter />
+        <Box className="w-2/3" sx={{ flexGrow: 1, padding: '5%' }}>
+            <div className='flex gap-3 underline text-sm z-40 mb-10 pl-12 items-center'>
+                <p className='cursor-pointer p-2' onClick={home}>All Products</p>
+                <p className='cursor-pointer p-2' onClick={()=>setSubCategory("")}>{mainCategory}</p>
+                <p className='cursor-pointer p-2'>{subCategory}</p>
+            </div>
+           
+            <Grid container spacing={6} className='pt-2 z-0'>
+                
                 {
                     filtered_data.map ( product => (
                         
                         <Grid item xs={3}>
+                            
                             <ItemMenuCard 
                             key={product.id} product_id = {product.id} name={product.name}
                             image_files={JSON.parse(product.image_files)} price={product.price} 
@@ -53,6 +67,7 @@ function ItemsContainer( {data, mainCategory, subCategory, setCart,cart }) {
           
             </Grid>
         </Box>
+        </div>
     );
 }
 
