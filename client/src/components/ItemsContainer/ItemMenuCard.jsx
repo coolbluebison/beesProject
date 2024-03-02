@@ -22,7 +22,8 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
         image : image_files[0],
         price : price,
         quantity_desc : quantity_desc,
-        seller_id: seller_id}
+        seller_id: seller_id,
+        amount: 1}
     ]
 
 
