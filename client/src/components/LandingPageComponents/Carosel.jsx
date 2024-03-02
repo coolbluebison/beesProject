@@ -33,7 +33,7 @@ export default function Carousel(){
                 className={`flex transition ease-out duration-500`}
                 style={{
                 transform: `translateX(-${current * (100 / slides.length)}%)`,
-                width: `${slides.length * 100}%`
+                width: `${slides.length * 100}vw`
                 }}
             >
                 {slides.map(s => <img src={s} className="h-full w-screen" key={s}/>)}
