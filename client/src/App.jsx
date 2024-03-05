@@ -39,13 +39,15 @@ function App() {
       )
   },[])
 
+  console.log(user)
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Rootlayout cart={cart}/>}>
         <Route index element= { <LandingPage /> } />
           <Route path="/item" element=  { <IndividualItem /> } />
           <Route path="/deals" element= { <Deals /> } />
-          <Route path='/login' element= { <Login />} />
+          <Route path='/login' element= { <Login setUser={setUser}/>} />
           <Route path='/shop' element=  { <ShopMain cart={cart} setCart={setCart}/>} />
           <Route path='/checkout' element= {<Checkout cart={cart} setCart={setCart}/>} />
       </Route>

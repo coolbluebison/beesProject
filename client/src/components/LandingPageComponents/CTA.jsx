@@ -12,7 +12,7 @@ import CTASection from "./CTAsection";
 
 export default function CTA(){
 
-    let [active,setActive] = useState(1)
+    let [active,setActive] = useState(0)
 
     function onClick(state){
         if(active === state){
