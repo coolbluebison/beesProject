@@ -78,7 +78,7 @@ function BrandingBanner(){
                                 borderRadius: '8px',
                             }}
 
-                            style={{ backgroundImage: `url(https://images.pexels.com/photos/6165051/pexels-photo-6165051.jpeg?auto=compress&cs=tinysrgb&w=600)` }}
+                            style={{ backgroundImage: `url(https://images.pexels.com/photos/1276237/pexels-photo-1276237.jpeg?auto=compress&cs=tinysrgb&w=800)` }}
                         />
                     </Grid>
                     <Grid item xs={12} sm={8}>
@@ -110,7 +110,7 @@ function BrandingBanner(){
                             borderRadius: '8px',
                         }}
 
-                        style={{ backgroundImage: `url(https://images.pexels.com/photos/6165051/pexels-photo-6165051.jpeg?auto=compress&cs=tinysrgb&w=600)` }}
+                        style={{ backgroundImage: `url(https://images.pexels.com/photos/7728651/pexels-photo-7728651.jpeg?auto=compress&cs=tinysrgb&w=800)` }}
                             // <img src='' />
                         />
                     </Grid>
