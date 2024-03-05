@@ -40,7 +40,7 @@ function ItemsContainer( {data, mainCategory, subCategory, setCart,cart,setMainC
         <div className='flex relative w-full'>
         <ShopFilter />
         <Box className="w-2/3" sx={{ flexGrow: 1, padding: '5%' }}>
-            <div className='flex gap-3 underline text-sm z-40 mb-10 pl-12 items-center'>
+            <div className='flex gap-3 underline text-sm z-40 mb-10 pl-12 items-center select-none'>
                 <p className='cursor-pointer p-2' onClick={home}>All Products</p>
                 {mainCategory !== "" ? <FaChevronRight /> : null}
                 <p className='cursor-pointer p-2' onClick={()=>setSubCategory("")}>{mainCategory}</p>
