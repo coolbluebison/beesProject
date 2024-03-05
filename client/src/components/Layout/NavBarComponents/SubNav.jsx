@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function SubNav({setDisplay,setSub,setSubMenu,subMenu}){
 
     let categories = [
-        "Bees In Baset Specials",
+        "Bees In Baskets Specials",
         "New",
         "Meat & Seafood",
         "Dairy & Eggs",

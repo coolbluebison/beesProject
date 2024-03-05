@@ -67,54 +67,59 @@ function BrandingBanner(){
 
 
             <Box sx={{ flexGrow: 1, overflow: 'hidden', px: 3 }}>
-                <Paper sx={{ maxWidth: 936, my: 1, mx: 'auto', p: 2, borderRadius: '16px' }}>
+                <Paper elevation={1} sx={{ maxWidth: 2100, my: 1, mx: 'auto', p: 2, borderRadius: '16px' }} >
                     <Grid container wrap="nowrap" spacing={2}>
                     <Grid item xs={12} sm={4}>
                         <Box
                             sx={{
                                 width: '100%',
-                                height: 200,
+                                height: 400,
                                 backgroundColor: 'primary.light',
                                 borderRadius: '8px',
                             }}
+
+                            style={{ backgroundImage: `url(https://images.pexels.com/photos/6165051/pexels-photo-6165051.jpeg?auto=compress&cs=tinysrgb&w=600)` }}
                         />
                     </Grid>
                     <Grid item xs={12} sm={8}>
-                        <Typography>
+                        <h6 className="text-lg md:text-2xl text-black font-bold ">
                         Shopping local builds and strengthens the backbone of our communities. By choosing local
-                        businesses, we support our neighbors and create a vibrant, interconnected community. This approach
-                        not only fosters economic growth but also promotes a sustainable and resilient local economy.
-                        </Typography>
+                        businesses, we support our neighbors and create a vibrant, interconnected community 
+                        </h6>
                     </Grid>
                     </Grid>
                 </Paper>
 
                 <br></br>
+                <br></br>
 
-                <Paper sx={{ maxWidth: 936, my: 1, mx: 'auto', p: 2, borderRadius: '16px' }}>
+                <Paper elevation={1} sx={{ maxWidth: 2100, my: 1, mx: 'auto', p: 2, borderRadius: '16px' }}>
                     <Grid container wrap="nowrap" spacing={2}>
                     <Grid item xs={12} sm={8}>
-                        <Typography>
+                        <h6 className="text-lg md:text-2xl text-black font-bold">
                         We prioritize working with producers that adhere to our code of conduct and standards, which include
-                        animal welfare first, organic produce whenever possible, and a commitment to sustainability. By
-                        maintaining these standards, we ensure that our products are not only beneficial to our consumers
-                        but also to the environment and society at large.
-                        </Typography>
+                        animal welfare first, organic produce whenever possible, and a commitment to sustainability
+                        </h6>
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Box
                         sx={{
                             width: '100%',
-                            height: 200,
+                            height: 400,
                             backgroundColor: 'primary.light',
                             borderRadius: '8px',
                         }}
+
+                        style={{ backgroundImage: `url(https://images.pexels.com/photos/6165051/pexels-photo-6165051.jpeg?auto=compress&cs=tinysrgb&w=600)` }}
                             // <img src='' />
                         />
                     </Grid>
                     </Grid>
                 </Paper>
             </Box>
+
+            <br></br>
+            <br></br>
 
 
         </>
