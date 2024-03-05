@@ -3,8 +3,8 @@
 # Standard library imports
 
 # Remote library imports
-from flask import request
-from flask_restful import Resource
+from flask import request ,session
+from flask_restful import Resource 
 
 # Local imports
 from config import app, db, api
@@ -82,6 +82,23 @@ class UserById(Resource):
             return {"error":"user does not exist"}
 
 api.add_resource(UserById, "/users/<int:id>")
+
+class CheckSession(Resource):
+    def get(self):
+        user = User.query.filter(User.id == session.get('user_id')).first()
+        if user:
+            return user.to_dict()
+        else:
+            return {'message': 'Not Authorized'}, 401
+        
+api.add_resource(CheckSession, '/check_session')
+
+class Logout(Resource):
+    def delete(self):
+        session['user_id'] = None
+        return {}, 204
+    
+api.add_resource(Logout, '/logout')
 
 class SellerNorm(Resource):
 
