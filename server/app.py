@@ -3,8 +3,8 @@
 # Standard library imports
 
 # Remote library imports
-from flask import request
-from flask_restful import Resource
+from flask import request ,session
+from flask_restful import Resource 
 
 # Local imports
 from config import app, db, api
@@ -38,7 +38,7 @@ class UserNorm(Resource):
             new_user = User(
                 username = user_to_create['username'],
                 email = user_to_create['email'],
-                _password_hash = user_to_create['_password_hash'],
+                _password_hash = user_to_create['password'],
                 address = user_to_create['address']
             )
 
@@ -82,6 +82,39 @@ class UserById(Resource):
             return {"error":"user does not exist"}
 
 api.add_resource(UserById, "/users/<int:id>")
+
+class Login(Resource):
+    def post(self):
+        data = request.get_json()
+        username= data['username']
+        password= data['password']
+        user = User.query.filter(User.username == username).first()
+        if user:
+            if user.authenticate(password):
+                session['user_id'] = user.id
+                return user.to_dict(), 200
+            else:
+                return {"Error": "password is wrong"}, 401
+        return {"Error": "User doesn't exist"}, 401
+
+api.add_resource(Login, '/login')
+
+class CheckSession(Resource):
+    def get(self):
+        user = User.query.filter(User.id == session.get('user_id')).first()
+        if user:
+            return user.to_dict()
+        else:
+            return {'message': 'Not Authorized'}, 401
+        
+api.add_resource(CheckSession, '/check_session')
+
+class Logout(Resource):
+    def delete(self):
+        session['user_id'] = None
+        return {}, 204
+    
+api.add_resource(Logout, '/logout')
 
 class SellerNorm(Resource):
 
