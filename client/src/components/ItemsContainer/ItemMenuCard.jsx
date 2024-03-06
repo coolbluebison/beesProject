@@ -31,6 +31,30 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
         navigate('/item', { state: {product_id, name, image_files, price, quantity_desc, seller_id} });
     }
 
+    function addToCart() {
+
+        if (cart.hasOwnProperty(product_id)) {
+            // does the product exist?
+            const updatedProduct = {
+              
+              ...cart[product_id], amount: cart[product_id].amount + 1 // Increase amount
+            };
+            // Return a new cart object with the updated product
+            return { ...cart, [product_id]: updatedProduct };
+          } else {
+           
+            const newProduct = {
+              name,
+              image: image_files[0], 
+              price,
+              quantity_desc,
+              seller_id,
+              amount: 1 
+            };
+            
+            return { ...cart, [product_id]: newProduct };
+     }
+    }
 
     return (
         <Box className="w-52 h-[400px] flex-shrink-0 flex flex-col ">
