@@ -1,7 +1,7 @@
 import CartItem from "../Layout/CartItem"
 import { BsFillBasket3Fill } from "react-icons/bs";
 
-export default function Checkout({cart,setCart}){
+export default function Checkout({cart, setCart}){
 
     console.log(cart)
 
@@ -24,3 +24,4 @@ export default function Checkout({cart,setCart}){
         </div>
     )
 }
+

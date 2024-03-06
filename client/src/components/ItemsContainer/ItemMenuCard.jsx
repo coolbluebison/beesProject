@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 {/* <ItemMenuCard key={product.id} name={product.name} image_files={product.image_files} price={product.price} quantity_desc={product.quantity_desc}  /> */}
 
 
-export default function ItemMenuCard( {product_id, name, image_files, price, quantity_desc, seller_id,setCart,cart }) {
+export default function ItemMenuCard( {product_id, name, image_files, price, quantity_desc, seller_id, setCart, cart }) {
     
     let pic = image_files[0]
 

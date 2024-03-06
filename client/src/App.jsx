@@ -39,6 +39,18 @@ function App() {
       )
   },[])
 
+
+  useEffect(()=>{
+    fetch('http://127.0.0.1:5555/carts/0')
+    .then(response => response.json())
+    .then(data => {
+      if (data.username){
+        setCart(data)
+      }}
+      )
+  },[])
+
+
   console.log(user)
 
   const router = createBrowserRouter(
