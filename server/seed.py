@@ -13,7 +13,7 @@ import json
 
 
 
-from models import db, User, Seller, Product
+from models import db, User, Seller, Product, Cart
 
 def seed_users():
 
@@ -175,6 +175,24 @@ def seed_products():
         db.session.add(new_product)
 
 
+def seed_carts():
+
+
+    # id = db.Column(db.Integer, primary_key=True)
+
+    # # foreign keys
+    # user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+    # # trying a many to many relationship between products and carts
+    # products = db.relationship('CartProductAssociation', backref='cart')
+
+    # initial_cart = json.dumps ({"0":"empty_product"})
+
+    new_cart = Cart(user_id=1, products= [])
+
+    db.session.add(new_cart)
+
+
 
 if __name__ == '__main__':
     fake = Faker()
@@ -189,6 +207,7 @@ if __name__ == '__main__':
         seed_users()
         seed_sellers()
         seed_products()
+        seed_carts()
 
         db.session.commit()
 
