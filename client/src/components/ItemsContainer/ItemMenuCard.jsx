@@ -16,45 +16,144 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
 
     const navigate = useNavigate();
 
-    let cartItem = [
-        {product_id : product_id,
-        name : name,
-        image : image_files[0],
-        price : price,
-        quantity_desc : quantity_desc,
-        seller_id: seller_id,
-        amount: 1}
-    ]
+    // let cartItem = [
+    //     {product_id : product_id,
+    //     name : name,
+    //     image : image_files[0],
+    //     price : price,
+    //     quantity_desc : quantity_desc,
+    //     seller_id: seller_id,
+    //     amount: 1}
+    // ]
 
 
     const handleItemClick = () => {
         navigate('/item', { state: {product_id, name, image_files, price, quantity_desc, seller_id} });
     }
 
-    function addToCart() {
+    // double check this cart add logic
+    // function addToCart() {
 
-        if (cart.hasOwnProperty(product_id)) {
-            // does the product exist?
-            const updatedProduct = {
-              
-              ...cart[product_id], amount: cart[product_id].amount + 1 // Increase amount
-            };
-            // Return a new cart object with the updated product
-            return { ...cart, [product_id]: updatedProduct };
-          } else {
-           
-            const newProduct = {
-              name,
-              image: image_files[0], 
-              price,
-              quantity_desc,
-              seller_id,
-              amount: 1 
-            };
+    //     console.log(cart)
+
+    //     if (cart.hasOwnProperty(product_id)) {
+    //         // does the product even exist???
             
-            return { ...cart, [product_id]: newProduct };
-     }
-    }
+    //         let updatedProduct = 
+            
+    //         {...cart[product_id], amount: cart[product_id].amount + 1 };
+
+    //         // PATCH attempt
+    //         fetch('http://127.0.0.1:5555/carts/0', {
+    //             method: 'PATCH', 
+    //             headers: {
+    //               'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(updatedProduct), 
+    //           })
+    //           .then(response => response.json()) 
+    //           .then(data => {
+    //             console.log(data);
+    //             })
+    //           .catch(error => {
+    //             console.error('Error:', error);
+    //         });
+    
+    //     } else {
+           
+    //         let newProduct = {
+    //           name,
+    //           image: image_files[0], 
+    //           price,
+    //           quantity_desc,
+    //           seller_id,
+    //           amount: 1 
+    //         };
+
+    //         console.log(newProduct)
+
+
+    //         // Post attempt
+    //         fetch('http://127.0.0.1:5555/carts/0', {
+    //             method: 'POST', 
+    //             headers: {
+    //               'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(newProduct), 
+    //           })
+    //           .then(response => response.json()) 
+    //           .then(data => {
+    //             console.log(data);
+    //             })
+    //           .catch(error => {
+    //             console.error('Error:', error);
+    //           });
+    //         }
+
+           
+
+    //  }
+
+
+        async function addToCart() {
+
+            if (cart.hasOwnProperty(product_id)) {
+                // Prepare the updated product object
+                let updatedProduct = {...cart[product_id], amount: cart[product_id].amount + 1};
+
+                try {
+                    const response = await fetch('http://127.0.0.1:5555/carts/1', {
+                        method: 'PATCH', 
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({[product_id]: updatedProduct}), 
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log("Update success:", data);
+                        setCart(prevCart => ({...prevCart, [product_id]: updatedProduct}));
+                    } else {
+                        console.error('Failed to update product:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            } 
+            
+            // if it doesnt, need to post the product
+            else {
+                
+                let newProduct = {
+                    name,
+                    image: image_files[0],
+                    price,
+                    quantity_desc,
+                    seller_id,
+                    amount: 1
+                };
+
+                try {
+                    const response = await fetch('http://127.0.0.1:5555/carts/1', {
+                        method: 'PATCH', 
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify(newProduct),
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log("Add success:", data);
+
+                        setCart(prevCart => ({...prevCart, [product_id]: newProduct}));
+                    } else {
+                        console.error('Failed to add new product:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+        }
+
+
+
+    // }
 
     return (
         <Box className="w-52 h-[400px] flex-shrink-0 flex flex-col ">
@@ -105,7 +204,7 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
             {/* Buttons, maybe first button add to cart, second button autoship, check Tri's color scheme and edit - 20% */}
             <div className="mt-auto text-sm font-semibold flex-grow-0 flex-shrink-0" >
                 <p className="w-full bg-yellow my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2"
-                onClick={()=>setCart([...cart,cartItem])}
+                onClick={()=> addToCart()}
                 >Add To Cart <BsCart2 size={"1.1rem"}/> </p>
                 {/* <p className="w-full bg-honey my-2 cursor-pointer text-center transition-all rounded-lg py-2 flex items-center justify-center gap-2"><RiLoopRightFill size={"1.1rem"}/>Autoship</p> */}
             </div>
@@ -113,3 +212,7 @@ export default function ItemMenuCard( {product_id, name, image_files, price, qua
         </Box>
     )
 }
+
+
+
+// setCart([...cart,cartItem])

@@ -29,26 +29,29 @@ function App() {
 
   let [cart,setCart] = useState([])
 
-  useEffect(()=>{
-    fetch('http://127.0.0.1:5555/check_session')
-    .then(response => response.json())
-    .then(data => {
-      if (data.username){
-        setUser(data)
-      }}
-      )
-  },[])
+  let [cart2,setCart2] = useState([])
+
+  // useEffect(()=>{
+  //   fetch('http://127.0.0.1:5555/check_session')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     if (data.username){
+  //       setUser(data)
+  //     }}
+  //     )
+  // },[])
 
 
   useEffect(()=>{
-    fetch('http://127.0.0.1:5555/carts/0')
-    .then(response => response.json())
-    .then(data => {
-      if (data.username){
-        setCart(data)
-      }}
+    fetch ('http://127.0.0.1:5555/carts/1')
+    .then ( response => response.json())
+    .then ( data => {
+        console.log(data)
+        setCart2(data)
+      }
       )
-  },[])
+  
+    },[])
 
 
   console.log(user)
@@ -60,7 +63,7 @@ function App() {
           <Route path="/item" element=  { <IndividualItem /> } />
           <Route path="/deals" element= { <Deals /> } />
           <Route path='/login' element= { <Login setUser={setUser}/>} />
-          <Route path='/shop' element=  { <ShopMain cart={cart} setCart={setCart}/>} />
+          <Route path='/shop' element=  { <ShopMain cart={cart2} setCart={setCart2}/>} />
           <Route path='/checkout' element= {<Checkout cart={cart} setCart={setCart}/>} />
       </Route>
     )
