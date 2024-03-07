@@ -27,7 +27,7 @@ import DrawerMain2 from "./NavBarComponents/DrawerMain2";
 import Bees7 from "../../assets/Bees7.png";
 
 
-export default function NavBar({cart}){
+export default function NavBar({cart,user,setUser}){
 
     let nav = useNavigate()
 
@@ -98,6 +98,7 @@ export default function NavBar({cart}){
     // let [display,setDisplay] = useState(true)
     
     let [subMenu,setSubMenu] = useState(false)
+    let [subMenuDisplay,setSubMenuDisplay] = useState([])
 
     return(
         <>
@@ -144,10 +145,10 @@ export default function NavBar({cart}){
             
             {/* <AutoshipNav ASDisplay={ASDisplay} setASHover={setASHover}/> */}
             {/* <CartNav cartHover={cartDisplay} setCartHover={setCartHover}/> */}
-            <ProfileNav pHover={pDisplay} setPHover={setPHover}/>
-            <SubNav setSubMenu={setSubMenu} subMenu={subMenu}/>
+            <ProfileNav pHover={pDisplay} setPHover={setPHover} user={user} setUser={setUser}/>
+            <SubNav setSubMenu={setSubMenu} subMenu={subMenu} setSubMenuDisplay={setSubMenuDisplay}/>
             {/* <Checkout cart={cart} /> */}
-            <SubMenu subMenu={subMenu}/>
+            <SubMenu subMenu={subMenu} subMenuDisplay={subMenuDisplay}/>
         </nav>
         </>
     )
